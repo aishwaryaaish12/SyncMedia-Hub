@@ -21,7 +21,7 @@ function FrontPageForm() {
         <Box component="img"sx={{ width: '50%',objectFit:'contain',marginTop:20 }}
         src="/Assets/peoplesocial.png"alt="Live from space album cove">
         </Box>
-        ff
+        
     </Box>
 
   )
