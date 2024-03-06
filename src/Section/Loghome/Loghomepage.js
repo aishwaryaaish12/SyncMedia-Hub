@@ -20,7 +20,7 @@ function Loghomepage(){
         <Box component="img"sx={{ width: '100',marginLeft:1, marginRight:1, marginTop:2}}
         src="/Assets/Calender 1.png"alt="">
         </Box>
-        <Typography sx={{color:'white', marginLeft:2, paddingRight:1, marginBottom:3}}>Calender</Typography>
+        <Typography sx={{color:'white', marginLeft:6, paddingRight:1, marginBottom:3}}>Calender</Typography>
       </Box>
       <Box sx={{backgroundColor:'#0B6869', width:330, borderRadius:2}}>
         <Box component="img"sx={{ width: '110', marginTop:3, marginLeft:1, paddingRight:1}}
