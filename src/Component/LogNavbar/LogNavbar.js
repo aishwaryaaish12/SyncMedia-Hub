@@ -19,7 +19,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 const drawerWidth = '100%';
-const navItems = ['HOME', 'BUSINESS', 'ANALYTICS', 'CONTANT LIBRARY','CAMPAIGN'];
+const navItems = ['HOME', 'BUSINESS', 'ANALYTICS', 'CONTENT LIBRARY','CAMPAIGN'];
 
 function LogNavbar(props) {
   const { window } = props;

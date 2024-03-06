@@ -1,6 +1,7 @@
 import React ,{useState}from 'react'
 import {Box, Typography, TextField, Button} from '@mui/material'
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
+import EditIcon from '@mui/icons-material/Edit';
 
 function ContentLibraryform(){
   const [selectedFile, setSelectedFile] = useState(null);
@@ -8,6 +9,9 @@ function ContentLibraryform(){
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
+  };
+  const handleUploadAnotherImage = () => {
+    setSelectedFile(null);
   };
   return (
     <Box >
@@ -23,27 +27,38 @@ function ContentLibraryform(){
         <Typography variant="body1" sx={{ marginLeft:28, marginTop:1, color:'gray'}}>
           Choose an image...
         </Typography>
+        <input
+            type="file"
+            accept="image/*"
+            onChange={handleFileChange}
+            style={{ display: 'none' }}
+            id="fileInput"
+          />
       </label>
       )}
       {selectedFile && (
-        <div >
-         <img
-         src={URL.createObjectURL(selectedFile)}
-         alt="Selected Image"
-         style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '2px' }}
-       />
-        {/* <Typography variant="body1" sx={{ marginTop: '10px' }}>
-          {selectedFile.name}
-        </Typography> */}
-        </div>
+        <Box sx={{ width: 300, height: 300, overflow: 'hidden', borderRadius: 2, position: 'relative', marginLeft:20}}>
+        <img
+          src={URL.createObjectURL(selectedFile)}
+          alt="Selected Image"
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+          <Button
+            variant="outlined"
+            onClick={handleUploadAnotherImage}
+            sx={{ position: 'absolute', bottom: 10, left: 10 }}
+          >
+          <EditIcon />
+          </Button>
+      </Box>
       )}
-      <input
+      {/* <input
         type="file"
         accept="image/*"
         onChange={handleFileChange}
         style={{ display: 'none' }}
         id="fileInput"
-      />
+      /> */}
     </Box> 
 
     <Box sx={{display:'flex', flexDirection:'row', justifyContent:'center', gap:5}}>
