@@ -9,7 +9,7 @@ function ContentLibrary(){
         justifyContent="center"
         alignItems="center"
         spacing={0}
-        sx={{height:"100vh", backgroundColor: '#ABCDCD', overflow:'hidden'}}
+        sx={{height:"100vh", backgroundColor: '#eed9c4', overflow:'hidden'}}
       >
           <ContentLibraryform />
           </Stack>

@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Box, Button, Card, CardMedia, Paper, TextField, Typography,IconButton } from '@mui/material';
+import { Box, Button,  TextField, Typography,IconButton } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import InputAdornment from '@mui/material/InputAdornment';
 import LockIcon from '@mui/icons-material/Lock';
@@ -31,7 +31,7 @@ function SignUpForm() {
         />
 
         <Box sx={{ display: 'flex', flexDirection: 'column', width: '30%' }}>
-          <Typography variant="h6" sx={{ marginBottom: 4, fontWeight: 'bold',fontSize: 20, marginTop:5, marginLeft:18 }}>
+          <Typography variant="h6" sx={{ marginBottom: 4, fontWeight: 'bold',fontSize: 20, marginTop:5, marginLeft:18 , color:'#ABCDCD' }}>
             Sign Up
           </Typography>
           <TextField label="Name" fullWidth variant="outlined" sx={{ marginBottom: 6 , width: 350, }} InputProps={{ startAdornment: (<InputAdornment position='start'><EmailIcon color='action' /> </InputAdornment>) }} />
@@ -80,12 +80,12 @@ function SignUpForm() {
           }}
         />
 
-          <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,backgroundColor:'#ABCDCD', transition: 'none', '&:hover': {backgroundColor:'White'},}}>
+          <Button variant="contained" color="primary" fullWidth sx={{ color: '#0B6869', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,backgroundColor:'#ABCDCD', transition: 'none', '&:hover': {backgroundColor:'White'},}}>
           <Link to="/Emailverification" style={{ textDecoration: 'none', color: 'inherit'}}>
           Sign Up
           </Link> 
           </Button>
-          <Typography variant="h6" sx={{ marginBottom: 2, fontSize: 16, fontWeight: 'bold', cursor: 'pointer', marginLeft: 6 }}>
+          <Typography variant="h6" sx={{ marginBottom: 2, fontSize: 16, fontWeight: 'bold', cursor: 'pointer', marginLeft: 6, color:'#ABCDCD' }}>
           <Link to="/Login" style={{ textDecoration: 'none', color: 'inherit' }}>
             Already have an account? Login
           </Link>  

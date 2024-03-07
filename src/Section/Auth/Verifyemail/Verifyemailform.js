@@ -6,7 +6,7 @@ function Verifyemailform() {
   return (
     // <Box >
 
-    <Box sx={{ display: 'flex',width:'100%',justifyContent:'center' , backgroundColor: '#ABCDCD',gap:10,marginLeft:15}}>
+    <Box sx={{ display: 'flex',width:'100%',justifyContent:'center' , backgroundColor: '#eed9c4',gap:10,marginLeft:15}}>
     <Box
       component="img"
       sx={{ width: '20%',objectFit:'contain' }}
@@ -15,10 +15,10 @@ function Verifyemailform() {
     />
 
     <Box sx={{ display: 'flex', flexDirection: 'column', width: '30%' }}>
-      <Typography variant="h6" sx={{ marginBottom: 2,marginTop: 4, fontWeight: 'bold',fontSize: 24 }}>
+      <Typography variant="h6" sx={{ marginBottom: 2,marginTop: 4, fontWeight: 'bold',fontSize: 24 ,color:'black' }}>
         Verify your Email Address
       </Typography>
-      <Typography variant="h6" sx={{ marginBottom: 5, fontSize: 18, marginLeft:6 }}>
+      <Typography variant="h6" sx={{ marginBottom: 5, fontSize: 18, marginLeft:6 ,color:'black' }}>
         Enter the verification code
       </Typography>
       <Box sx={{display:'flex', flexDirection:'row',gap:3, marginLeft:1, marginBottom:3}}>
@@ -35,10 +35,10 @@ function Verifyemailform() {
           <OutlinedInput  sx={{fontSize:14, textAlign:'center', padding:1}} inputProps={{ maxLength: 1 }}/>
       </FormControl>
       </Box>
-      <Typography variant="h6" sx={{ marginBottom: 3, marginLeft: 10, fontSize: 12 }}> 
+      <Typography variant="h6" sx={{ marginBottom: 3, marginLeft: 10, fontSize: 12 , color:'black'}}> 
        00.29 Resend Confirm code
       </Typography>
-      <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', width: 300, height: 40, marginBottom: 4, marginLeft: 1, fontSize: 14 ,backgroundColor:'#ABCDCD', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>
+      <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', width: 300, height: 40, marginBottom: 4, marginLeft: 1, fontSize: 14 ,backgroundColor:'#eed9c4', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>
       <Link to="/ResetPassword" style={{ textDecoration: 'none', color: 'inherit'}}>
         Confirm the code
       </Link>  
