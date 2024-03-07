@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 function Loghomepage(){
   return (
-    <Box sx={{ display: 'flex',width:'100%',justifyContent:'space-around', backgroundColor: '#ABCDCD'}}>
+    <Box sx={{ display: 'flex',width:'100%',justifyContent:'space-around', backgroundColor: '#eed9c4'}}>
      <Box sx={{ width: '500%', maxWidth: 500,display:'flex',flexDirection:'column',marginLeft:-10 }}>
     <Typography variant="h3" sx={{marginLeft:20,marginTop:20, width:450}}>
       Let's Level Up 

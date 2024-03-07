@@ -6,7 +6,7 @@ function Verifyemailform() {
   return (
     // <Box >
 
-    <Box sx={{ display: 'flex',width:'100%',justifyContent:'center' , backgroundColor: '#ABCDCD',gap:10,marginLeft:15}}>
+    <Box sx={{ display: 'flex',width:'100%',justifyContent:'center' , backgroundColor: '#eed9c4',gap:10,marginLeft:15}}>
     <Box
       component="img"
       sx={{ width: '20%',objectFit:'contain' }}
@@ -50,4 +50,4 @@ function Verifyemailform() {
   );
 }
 
-export default Verifyemailform
+export default Verifyemailform

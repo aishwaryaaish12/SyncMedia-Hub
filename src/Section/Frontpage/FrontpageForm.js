@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function FrontPageForm() {
   return (
-    <Box sx={{ display: 'flex',justifyContent:'space-around',gap: '3', backgroundColor: '#ABCDCD'}}>
+    <Box sx={{ display: 'flex',justifyContent:'space-around',gap: '3', backgroundColor: '#eed9c4'}}>
     <Box sx={{ width: '500%', maxWidth: 500,display:'flex',flexDirection:'column',marginLeft:-10 }}>
     <Typography variant="h1" sx={{marginLeft:7,marginTop:5}}>
       Dive into a world of influence-

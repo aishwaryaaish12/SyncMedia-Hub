@@ -2,7 +2,6 @@ import React from 'react'
 import { Box, Stack } from '@mui/material';
 import Verifyemailform from '../../Section/Auth/Verifyemail/Verifyemailform';
 
-
 const Verifyemail = () => {
   return (
     <Stack

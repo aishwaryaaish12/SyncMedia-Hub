@@ -50,9 +50,9 @@ function Navbar(props) {
 
   return (
     <>
-      <Box sx={{ display: 'flex', backgroundColor: '#ABCDCD', overflow: 'hidden' }}>
+      <Box sx={{ display: 'flex', backgroundColor: '#eed9c4', overflow: 'hidden' }}>
         <CssBaseline />
-        <AppBar component="nav" elevation={0} sx={{ backgroundColor: '#ABCDCD' }}>
+        <AppBar component="nav" elevation={0} sx={{ backgroundColor: '#eed9c4' }}>
           <Toolbar sx={{ justifyContent: 'space-between' }}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <IconButton
@@ -67,7 +67,7 @@ function Navbar(props) {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ color: 'white', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                sx={{ color: 'black', flexGrow: 1, display: { xs: 'none', sm: 'block' },fontFamily:'cursive' }}
               >
                 SyncMedia Hub
               </Typography>

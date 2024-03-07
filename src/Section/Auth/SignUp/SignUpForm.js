@@ -22,11 +22,11 @@ function SignUpForm() {
   return (
     // <Box >
 
-      <Box sx={{ display: 'flex',width:'100%',justifyContent:'space-around', backgroundColor: '#ABCDCD'}}>
+      <Box sx={{ display: 'flex',width:'100%',justifyContent:'space-around', backgroundColor: '#eed9c4'}}>
         <Box
           component="img"
           sx={{ width: '30%',objectFit:'contain' }}
-          src="/Assets/undraw_Sign_up_n6im 1.png"
+          src="/Assets/Signupnew.png"
           alt="Live from space album cover"
         />
 
@@ -80,7 +80,7 @@ function SignUpForm() {
           }}
         />
 
-          <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,backgroundColor:'#ABCDCD', transition: 'none', '&:hover': {backgroundColor:'White'},}}>
+          <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,backgroundColor:'#eed9c4', transition: 'none', '&:hover': {backgroundColor:'White'},}}>
           <Link to="/Emailverification" style={{ textDecoration: 'none', color: 'inherit'}}>
           Sign Up
           </Link> 
@@ -98,4 +98,4 @@ function SignUpForm() {
   );
 }
 
-export default SignUpForm
+export default SignUpForm

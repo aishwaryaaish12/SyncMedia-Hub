@@ -17,6 +17,7 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import Loghome from './pages/Loghome/Loghome';
 import Formcomplete from './pages/Formcomplete/Formcomplete';
 import ContentLibrary from './pages/ContentLibrary/ContentLibrary';
+import Business from './pages/Auth/Business/Business';
 
 
 
@@ -81,6 +82,11 @@ const router = createBrowserRouter([
     path: "/ContentLibrary",
     element:<ContentLibrary/>,
   },
+  {
+    path: "/Business",
+    element:<Business/>,
+  },
+
 ]);
 
 function App() {

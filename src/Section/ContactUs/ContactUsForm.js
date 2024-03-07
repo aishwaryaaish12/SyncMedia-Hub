@@ -6,11 +6,11 @@ function ContactUsForm() {
   return (
     // <Box >
 
-    <Box sx={{ display: 'flex',width:'100%',justifyContent:'center',gap: '1', backgroundColor: '#ABCDCD'}}>
+    <Box sx={{ display: 'flex',width:'100%',justifyContent:'center',gap: '1', backgroundColor: '#eed9c4'}}>
     <Box
       component="img"
       sx={{ width: '40%',objectFit:'contain' }}
-      src="/Assets/contact.png"
+      src="/Assets/contactusnew.png"
       alt=""
     />
 
@@ -22,7 +22,7 @@ function ContactUsForm() {
       <TextField label="Email ID"  fullWidth variant="outlined" sx={{ marginBottom: 3, width: 350}}  />
       <TextField label="Phone Number"  fullWidth multline rows={4} variant="outlined" sx={{ marginBottom: 3, width: 350}}  />
       <TextField label="Message" id="outlined-multiline-static" multiline rows={4} sx={{ marginBottom: 3, width: 350}} />
-      <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,backgroundColor:'#ABCDCD', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>
+      <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,backgroundColor:'#eed9c4', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>
       <Link to="/Contact" style={{ textDecoration: 'none', color: 'inherit' }}> 
         Submit
       </Link>
