@@ -11,7 +11,7 @@ function AboutUs() {
   justifyContent="center"
   alignItems="center"
   spacing={2}
-  sx={{height:"100vh", backgroundColor: '#ABCDCD'}}
+  sx={{height:"100vh", backgroundColor: '#eed9c4'}}
 >
 <Navbar/>
 

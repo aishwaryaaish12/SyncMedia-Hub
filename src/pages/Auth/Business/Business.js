@@ -1,9 +1,9 @@
 import { Box, Stack } from '@mui/material';
 import React from 'react';
-import Navbar from '../../Component/Navbar/Navbar';
-import ServicesForm from '../../Section/Services/ServicesForm';
+import BusinessForm from '../../../Section/Auth/Business/BusinessForm';
 
-function Services() {
+
+function Business() {
   return (
     
 <Stack
@@ -13,11 +13,10 @@ function Services() {
   spacing={2}
   sx={{height:"100vh", backgroundColor: '#eed9c4'}}
 >
-<Navbar/>
 
-      <ServicesForm />
+      < BusinessForm/>
     </Stack>
   )
 }
 
-export default Services
+export default Business

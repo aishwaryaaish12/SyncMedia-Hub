@@ -50,4 +50,4 @@ function Verifyemailform() {
   );
 }
 
-export default Verifyemailform
+export default Verifyemailform

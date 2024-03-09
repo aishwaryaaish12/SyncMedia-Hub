@@ -18,7 +18,7 @@ function ServicesForm() {
 
       <Card sx={{ maxWidth: 305 }}>
         <CardMedia
-          sx={{ height: 180 }}
+          sx={{ height: 190 }}
           image="/Assets/Crossplatformposting.png"
     
         />
@@ -35,8 +35,8 @@ accounts on various channels.</Typography>
 
       <Card sx={{ maxWidth: 305 }}>
         <CardMedia
-          sx={{ height: 180 }}
-          image="/Assets/ContentCalender.png"
+          sx={{ height: 190 }}
+          image="/Assets/contentcalendernew.png"
         
         />
         <CardContent>
@@ -51,8 +51,8 @@ organize content across different platforms.          </Typography>
       </Card>
       <Card sx={{ maxWidth: 305 }}>
         <CardMedia
-          sx={{ height: 180 }}
-          image="/Assets/Emailandwhatsappcampaign.png"
+          sx={{ height: 190 }}
+          image="/Assets/Campaign.png"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div" sx={{textAlign:'center'}}>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Stack } from '@mui/material';
-import Resetpasswordform from '../../../Section/Auth/Resetpassword/Resetpasswordform';
-
+import Resetpasswordform from '../../../Section/Auth/Resetpasword/Resetpassword';
 
 function ResetPassword() {
   return (

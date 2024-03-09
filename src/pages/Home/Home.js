@@ -15,6 +15,7 @@ import AboutUs from '../AboutUs/AboutUs'
 import Loghome from '../Loghome/Loghome'
 import Contact from '../Contact/Contact'
 import ContentLibrary from '../ContentLibrary/ContentLibrary'
+import Business from '../Auth/Business/Business'
 
 
 function Home() {
@@ -36,6 +37,7 @@ function Home() {
         <AboutUs/>
         <Loghome/>
         <ContentLibrary/>
+        <Business/>
     </Box> 
   )
 }

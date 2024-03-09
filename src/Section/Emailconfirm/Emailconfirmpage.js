@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function Emailconfirmpage(){
   return (
     <Box sx={{backgroundColor: 'white', height: 200, display: 'flex', flexDirection: 'row',  alignItems: 'center', flexDirection: 'row', width: 650}}>
-      <Box component="img"sx={{ width: '30%',objectFit:'contain' }}src="/Assets/Verify.png" alt="Live from space album cover"
+      <Box component="img"sx={{ width: '30%',objectFit:'contain' }}src="/Assets/emailverification.png" alt="Live from space album cover"
     />
     <Box sx={{ display: 'flex', flexDirection: 'column', width: '60%' }}>
       <Typography variant="h6" sx={{ marginTop: 4, fontSize: 18 , color:'#0B6869'}}>
