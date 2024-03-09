@@ -6,7 +6,7 @@ function Resetpasswordform(){
   return (
     // <Box >
 
-    <Box sx={{ display: 'flex',width:'100%',justifyContent:'center' , backgroundColor: '#ABCDCD',gap:8,marginLeft:15}}>
+    <Box sx={{ display: 'flex',width:'100%',justifyContent:'center' , backgroundColor: '#eed9c4',gap:8,marginLeft:15}}>
     <Box
       component="img"
       sx={{ width: '20%',objectFit:'contain' }}
@@ -15,7 +15,7 @@ function Resetpasswordform(){
     />
 
     <Box sx={{ display: 'flex', flexDirection: 'column', width: '30%' }}>
-      <Typography variant="h6" sx={{ marginBottom: 2,marginTop: 4, fontWeight: 'bold',fontSize: 24 ,marginLeft:5}}>
+      <Typography variant="h6" sx={{ marginBottom: 2,marginTop: 4, fontWeight: 'bold',fontSize: 24 ,marginLeft:5,color:'black' }}>
         RESET PASSWORD
       </Typography>
       <FormControl fullWidth variant="outlined" sx={{ marginBottom: 5 , width: 300}}>
@@ -24,7 +24,7 @@ function Resetpasswordform(){
       <FormControl fullWidth variant="outlined" sx={{ marginBottom: 5 , width: 300}}>
           <OutlinedInput placeholder="Confirm the password" sx={{fontSize:14, textAlign:'center'}} />
       </FormControl>
-      <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', width: 200,borderRadius: 20, height: 40, marginBottom: 2, marginLeft: 7, fontSize: 14 ,backgroundColor:'#ABCDCD', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>
+      <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', width: 200,borderRadius: 20, height: 40, marginBottom: 2, marginLeft: 7, fontSize: 14 ,backgroundColor:'#eed9c4', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>
       <Link to="/Login" style={{ textDecoration: 'none', color: 'inherit'}}>
       Confirm
       </Link>

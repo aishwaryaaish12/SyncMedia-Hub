@@ -9,7 +9,7 @@ function ResetPassword() {
   justifyContent="center"
   alignItems="center"
   spacing={0}
-  sx={{height:"100vh", backgroundColor: '#ABCDCD'}}
+  sx={{height:"100vh", backgroundColor: '#eed9c4'}}
 >
 
       <Resetpasswordform />

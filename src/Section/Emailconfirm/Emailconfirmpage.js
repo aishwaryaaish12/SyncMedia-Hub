@@ -8,10 +8,10 @@ function Emailconfirmpage(){
       <Box component="img"sx={{ width: '30%',objectFit:'contain' }}src="/Assets/emailverification.png" alt="Live from space album cover"
     />
     <Box sx={{ display: 'flex', flexDirection: 'column', width: '60%' }}>
-      <Typography variant="h6" sx={{ marginTop: 4, fontSize: 18 }}>
+      <Typography variant="h6" sx={{ marginTop: 4, fontSize: 18 , color:'black'}}>
         Your Email ID has been successfully verified!
       </Typography>
-      <Button variant="text" sx={{color:'black', marginTop:5, width:200, marginLeft:25}}>
+      <Button variant="text" sx={{color:'black', marginTop:5, width:200, marginLeft:25, color:'black'}}>
         <Link to="/Login" style={{ textDecoration: 'none', color: 'inherit'}}>Back to Login</Link>
       </Button>
     </Box>

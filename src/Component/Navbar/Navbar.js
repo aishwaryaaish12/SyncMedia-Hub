@@ -19,7 +19,6 @@ import { Link } from 'react-router-dom';
 
 const drawerWidth = '100%';
 const navItems = ['HOME', 'SERVICES', 'ABOUT US', 'CONTACT US'];
-
 function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -74,14 +73,14 @@ function Navbar(props) {
             </Box>
             <Box sx={{ display: 'flex', gap: 8, paddingRight: 10 }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#000' }}>
+                <Button key={item} sx={{ color: 'black'}}>
                   {item === 'HOME' ? (
                   <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <Typography sx={{ fontWeight: 'medium' }}>
+                    <Typography sx={{ fontWeight: 'medium', fontFamily:'revert'}}>
                   {item}
                   </Typography>
                   </Link>) : (<Link to={`/${item.toLowerCase().replace(/\s/g, '')}`} style={{ textDecoration: 'none',color:'inherit' }}>
-                      <Typography sx={{ fontWeight: 'medium' }}>{item}</Typography>
+                      <Typography sx={{ fontWeight: 'medium', fontFamily:'revert'}}>{item}</Typography>
                     </Link>)} 
                 </Button>
               ))}
