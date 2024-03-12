@@ -16,36 +16,28 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 const drawerWidth = '100%';
-const navItems = ['HOME', 'BUSINESS', 'ANALYTICS', 'CONTENT LIBRARY','CAMPAIGN'];
+const navItems = ['HOME', 'BUSINESS', 'ANALYTICS', 'CONTENT LIBRARY', 'CAMPAIGN'];
 
 function LogNavbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [campaignAnchor, setCampaignAnchor] = React.useState(null);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+  const handleCampaignMenuOpen = (event) => {
+    setCampaignAnchor(event.currentTarget);
+  };
+
+  const handleCampaignMenuClose = () => {
+    setCampaignAnchor(null);
+  };
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
@@ -68,26 +60,58 @@ function LogNavbar(props) {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ color: 'black', flexGrow: 1, display: { xs: 'none', sm: 'block'}, fontFamily:'cursive'}}
+                sx={{ color: 'black', flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontFamily: 'cursive' }}
               >
                 SyncMedia Hub
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', gap: 7, paddingRight: 5 }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: 'black' }}>
-                  {item === 'HOME' ? (
-                  <Link to='/Loghome' style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <Typography sx={{ fontWeight: 'medium' }}>
-                  {item}
-                  </Typography>
-                  </Link>) : (<Link to={`/${item.toLowerCase().replace(/\s/g, '')}`} style={{ textDecoration: 'none',color:'inherit' }}>
-                      <Typography sx={{ fontWeight: 'medium' }}>{item}</Typography>
-                    </Link>)} 
-                </Button>
+                <React.Fragment key={item}>
+                  {item === 'CAMPAIGN' ? (
+                    <>
+                      <Button sx={{ color: 'black' }} onClick={handleCampaignMenuOpen}>
+                        <Typography sx={{ fontWeight: 'medium' }}>{item}</Typography>
+                      </Button>
+                      <Menu
+                        id="campaign-menu"
+                        anchorEl={campaignAnchor}
+                        open={Boolean(campaignAnchor)}
+                        onClose={handleCampaignMenuClose}
+                      >
+                        <MenuItem
+                          component={Link}
+                          to="/EmailCampaign"
+                          onClick={handleCampaignMenuClose}>
+                          Email
+                        </MenuItem>
+                        <MenuItem
+                          component={Link}
+                          to="/campaign/option2"
+                          onClick={handleCampaignMenuClose}
+                        >
+                          Whatsapp
+                        </MenuItem>
+                        {/* Add more options as needed */}
+                      </Menu>
+                    </>
+                  ) : (
+                    <Button key={item} sx={{ color: 'black' }}>
+                      {item === 'HOME' ? (
+                        <Link to='/Loghome' style={{ textDecoration: 'none', color: 'inherit' }}>
+                          <Typography sx={{ fontWeight: 'medium' }}>{item}</Typography>
+                        </Link>
+                      ) : (
+                        <Link to={`/${item.toLowerCase().replace(/\s/g, '')}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                          <Typography sx={{ fontWeight: 'medium' }}>{item}</Typography>
+                        </Link>
+                      )}
+                    </Button>
+                  )}
+                </React.Fragment>
               ))}
               <IconButton color="inherit" component={Link} to="/account" style={{ textDecoration: 'none', color: 'black' }}>
-              <AccountCircleIcon />
+                <AccountCircleIcon />
               </IconButton>
             </Box>
           </Toolbar>
@@ -100,14 +124,29 @@ function LogNavbar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, 
+            keepMounted: true,
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
-          {drawer}
+          {/* Adjust the drawer content as needed */}
+          <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+            <Typography variant="h6" sx={{ my: 2 }}>
+              MUI
+            </Typography>
+            <Divider />
+            <List>
+              {navItems.map((item) => (
+                <ListItem key={item} disablePadding>
+                  <ListItemButton sx={{ textAlign: 'center' }}>
+                    <ListItemText primary={item} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
         </Drawer>
       </nav>
     </>
@@ -115,10 +154,6 @@ function LogNavbar(props) {
 }
 
 LogNavbar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 

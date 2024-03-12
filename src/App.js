@@ -18,6 +18,11 @@ import Loghome from './pages/Loghome/Loghome';
 import Formcomplete from './pages/Formcomplete/Formcomplete';
 import ContentLibrary from './pages/ContentLibrary/ContentLibrary';
 import Business from './pages/Auth/Business/Business';
+import Analytics from './pages/Analytics/Analytics';
+import Facebookconnect from './pages/Auth/Facebookconnect/Facebookconnect';
+import EmailCampaign from './pages/EmailCampaign/EmailCampaign';
+import CreateEmailCampaign from './pages/CreateEmailCampaign/CreateEmailCampaign';
+
 
 
 
@@ -86,6 +91,24 @@ const router = createBrowserRouter([
     path: "/Business",
     element:<Business/>,
   },
+  {
+    path: "/Analytics",
+    element:<Analytics/>,
+  },
+  {
+    path: "/Facebookconnect",
+    element:<Facebookconnect/>,
+  },
+  {
+    path: "/EmailCampaign",
+    element:<EmailCampaign/>,
+  },
+  {
+    path: "/CreateEmailCampaign",
+    element:<CreateEmailCampaign/>,
+  },
+
+
 
 ]);
 
@@ -109,6 +132,11 @@ function App() {
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/Loghome' element={<Loghome/>}/>
         <Route path='/Formcomplete' element={<Formcomplete/>}/>
+        <Route path='/Analytics' element={<Analytics/>}/>
+        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
+
+
+
       </Routes>
     </RouterProvider>
   );

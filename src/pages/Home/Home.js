@@ -16,7 +16,10 @@ import Loghome from '../Loghome/Loghome'
 import Contact from '../Contact/Contact'
 import ContentLibrary from '../ContentLibrary/ContentLibrary'
 import Business from '../Auth/Business/Business'
-
+import Analytics from '../Analytics/Analytics'
+import Facebookconnect from '../Auth/Facebookconnect/Facebookconnect'
+import EmailCampaign from '../EmailCampaign/EmailCampaign'
+import CreateEmailCampaign from '../CreateEmailCampaign/CreateEmailCampaign'
 
 function Home() {
 
@@ -38,6 +41,10 @@ function Home() {
         <Loghome/>
         <ContentLibrary/>
         <Business/>
+        <Analytics />
+        <Facebookconnect />
+        <EmailCampaign />
+        <CreateEmailCampaign />
     </Box> 
   )
 }

@@ -8,6 +8,12 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
 import Checkbox from '@mui/material/Checkbox';
 import { Link } from 'react-router-dom';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -37,10 +43,10 @@ function BusinessForm() {
   return (
 
       <Box 
-  sx={{ display: 'flex',width:'100%',justifyContent:'space-around',gap: '3', backgroundColor: '#eed9c4',color:'000'}}>
+  sx={{ display: 'flex',width:'100%',justifyContent:'space-around',gap: '3', backgroundColor: '#eed9c4',color:'000',position:'fixed'}}>
 <Box component="img"
 src="/Assets/business.png"
-sx={{width:685,height:600,marginLeft:-110,position:'fixed',marginBottom:25}}
+sx={{width:685,height:600,marginLeft:-115,position:'fixed',marginBottom:25}}
 />
         <Box         sx={{
           display: 'flex',
@@ -77,10 +83,15 @@ sx={{width:685,height:600,marginLeft:-110,position:'fixed',marginBottom:25}}
   <Box>
   <Typography sx={{fontSize:20,marginLeft:-65,marginTop:4}}>Logo</Typography>
 <TextField id="outlined-basic"  variant="outlined" label={
-  <Typography sx={{color:'black'}}>
-Upload Image</Typography>
+    selectedFile
+    ? ''  
+    : (
+        <Typography sx={{ color: '#b3acab' }}>
+          Upload Image
+        </Typography>
+      )
 }
- InputLabelProps={{ shrink: false }} 
+InputLabelProps={{ shrink: false }} 
 InputProps={{
   endAdornment: (
     <FileUploadOutlinedIcon
@@ -89,7 +100,8 @@ InputProps={{
       />
     ),
   }}
-sx={{marginLeft:-51,marginTop:-5,width:300}} />
+sx={{marginLeft:-51,marginTop:-5,width:300}} 
+value={selectedFile ? selectedFile.name : ''} />
           <input
             type="file"
             accept="image/*"
@@ -108,45 +120,62 @@ sx={{marginLeft:-51,marginTop:-5,width:300}} />
   </Box>
 
 <Box>
-  <Typography variant='h5' sx={{marginTop:40,marginLeft:-83,fontWeight:'500',marginBottom:7}}>SOCIAL MEDIA CHANNELS</Typography> 
+  <Typography variant='h5' sx={{marginTop:40,marginLeft:-80,fontWeight:'500',marginBottom:7}}>SOCIAL MEDIA CHANNELS</Typography> 
  </Box> 
   <Box> 
   <Checkbox {...label}
-   sx={{marginTop:46,marginLeft:-80, }} />
+   sx={{marginTop:46,marginLeft:-75, }} />
  </Box>
 
+
   <Box>
-    <Typography sx={{marginTop:47,marginLeft:-75,fontSize:20}}>Facebook</Typography>
+
+  <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 47, marginLeft: -70 }}>
+    <FacebookIcon />
+    <Typography sx={{ fontSize: 20, marginLeft: 0 }}>Facebook</Typography>
+  </Box>
   </Box>
   
 
 <Box>
-    <Checkbox {...label} sx={{marginTop:51,marginLeft:-80}} />  
+    <Checkbox {...label} sx={{marginTop:51,marginLeft:-75}} />  
  </Box>
 
   <Box>
-    <Typography sx={{marginTop:52,marginLeft:-75,fontSize:20}}>Instagram</Typography>
+  <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 52, marginLeft: -70 }}>
+    <InstagramIcon />
+    <Typography sx={{ fontSize: 20, marginLeft: 0 }}>Instagram</Typography>
+  </Box>
   </Box>
   <Box>
-     <Checkbox {...label} sx={{marginTop:56,marginLeft:-80}} />   
+     <Checkbox {...label} sx={{marginTop:56,marginLeft:-75}} />   
  </Box>
           <Box>
-    <Typography sx={{marginTop:57,marginLeft:-75,fontSize:20}}>LinkedIn</Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 57, marginLeft: -70 }}>
+    <LinkedInIcon />
+    <Typography sx={{ fontSize: 20, marginLeft: 0 }}>LinkedIn</Typography>
+  </Box>
   </Box>
   <Box>
-  <Checkbox {...label} sx={{marginTop:46,marginLeft:-60}} />   
+  <Checkbox {...label} sx={{marginTop:46,marginLeft:-53}} />   
  </Box>
           <Box>
-    <Typography sx={{marginTop:47,marginLeft:-55,fontSize:20}}>Twitter</Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 47, marginLeft: -48 }}>
+    <TwitterIcon />
+    <Typography sx={{ fontSize: 20, marginLeft: 0 }}>Twitter</Typography>
+  </Box>
   </Box>
   <Box>
-   <Checkbox {...label} sx={{marginTop:51,marginLeft:-60}} />  
+   <Checkbox {...label} sx={{marginTop:51,marginLeft:-53}} />  
  </Box>
           <Box>
-    <Typography sx={{marginTop:52,marginLeft:-55,fontSize:20}}>YouTube</Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', marginTop: 52, marginLeft: -48 }}>
+    <YouTubeIcon />
+    <Typography sx={{ fontSize: 20, marginLeft: 0 }}>YouTube</Typography>
+  </Box>
   </Box>
 <Box>
-  <Button variant="contained" sx={{width:150,height:55,marginTop:64,marginLeft:-70,
+  <Button variant="contained" sx={{width:150,height:55,marginTop:66,marginLeft:-65,
 color:'black',fontSize:25,backgroundColor:'#eed9c4',borderRadius:25,transition:'none','&:hover':{backgroundColor:'white'}}}>
   <Link to="/Formcomplete" style={{ textDecoration: 'none', color: 'inherit'}}>SUBMIT</Link>
 
