@@ -15,7 +15,7 @@ const Emailverificationform = () => {
     />
 
     <Box sx={{ display: 'flex', flexDirection: 'column', width: '30%' }}>
-      <Typography variant="h6" sx={{ marginBottom: 5,marginTop: 4, fontWeight: 'bold',fontSize: 18, marginLeft:4, color:'#0B6869' }}>
+      <Typography variant="h6" sx={{ marginBottom: 5,marginTop: 4, fontWeight: 'bold',fontSize: 18, marginLeft:4, color:'black' }}>
         EMAIL VERIFICATION
       </Typography>
       <FormControl fullWidth variant="outlined" sx={{ marginBottom: 5 , width: 250}}>
@@ -26,7 +26,7 @@ const Emailverificationform = () => {
         Verify
       </Link>  
       </Button>
-      <Typography variant="h6" sx={{ marginBottom: 2, marginLeft: 7, fontSize: 12, color:'#0B6869' }}> 
+      <Typography variant="h6" sx={{ marginBottom: 2, marginLeft: 7, fontSize: 12, color:'black' }}> 
        00.29 Resend Confirm code
       </Typography>
     </Box>

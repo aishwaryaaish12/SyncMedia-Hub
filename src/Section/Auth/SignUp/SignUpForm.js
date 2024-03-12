@@ -31,7 +31,7 @@ function SignUpForm() {
         />
 
         <Box sx={{ display: 'flex', flexDirection: 'column', width: '30%' }}>
-          <Typography variant="h6" sx={{ marginBottom: 4, fontWeight: 'bold',fontSize: 20, marginTop:5, marginLeft:18 , color:'#ABCDCD' }}>
+          <Typography variant="h6" sx={{ marginBottom: 4, fontWeight: 'bold',fontSize: 20, marginTop:5, marginLeft:18 , color:'black' }}>
             Sign Up
           </Typography>
           <TextField label="Name" fullWidth variant="outlined" sx={{ marginBottom: 6 , width: 350, }} InputProps={{ startAdornment: (<InputAdornment position='start'><EmailIcon color='action' /> </InputAdornment>) }} />
@@ -85,7 +85,7 @@ function SignUpForm() {
           Sign Up
           </Link> 
           </Button>
-          <Typography variant="h6" sx={{ marginBottom: 2, fontSize: 16, fontWeight: 'bold', cursor: 'pointer', marginLeft: 6, color:'#ABCDCD' }}>
+          <Typography variant="h6" sx={{ marginBottom: 2, fontSize: 16, fontWeight: 'bold', cursor: 'pointer', marginLeft: 6, color:'black' }}>
           <Link to="/Login" style={{ textDecoration: 'none', color: 'inherit' }}>
             Already have an account? Login
           </Link>  
