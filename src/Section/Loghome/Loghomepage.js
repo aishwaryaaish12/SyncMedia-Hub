@@ -19,7 +19,7 @@ function Loghomepage(){
     platform  puts the full potential of social media in your hands 
     </Typography>
     <Typography variant='h5' sx={{marginLeft:15,marginTop:1, width:600,color:'#black' }}>
-      to trandform your marketing strategy and also all areas  
+      to transform your marketing strategy and also all areas  
     </Typography>
     <Typography variant='h5' sx={{marginLeft:15,marginTop:1, width:600,color:'#black' }}>
      of your organization 
@@ -35,7 +35,9 @@ function Loghomepage(){
         <Box component="img"sx={{ width: 150, height:140, marginTop:2,  paddingRight:1}}
         src="/Assets/undraw_Account_re_o7id (1).png"alt="">
         </Box>
-        <Typography sx={{color:'white', marginLeft:5, marginTop:1}}>Accounts</Typography>
+        <Typography sx={{color:'white', marginLeft:5, marginTop:1}}>
+         <Link to="/Analytics" style={{ textDecoration: 'none', color: 'inherit' }}>Accounts</Link>
+        </Typography>
       </Box>
       <Box sx={{backgroundColor:'#2E1114', width:330, borderRadius:2}}>
         <Box component="img"sx={{ width:150, height:140, marginTop:2}}

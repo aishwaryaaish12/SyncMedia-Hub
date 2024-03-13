@@ -66,7 +66,8 @@ function Navbar(props) {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ color: 'black', flexGrow: 1, display: { xs: 'none', sm: 'block' } , fontFamily:'cursive'}}>
+                sx={{ color: 'black', flexGrow: 1, display: { xs: 'none', sm: 'block' },fontFamily:'cursive' }}
+              >
                 SyncMedia Hub
               </Typography>
             </Box>

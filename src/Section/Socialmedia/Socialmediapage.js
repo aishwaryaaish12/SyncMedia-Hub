@@ -1,5 +1,5 @@
 import { Box, Typography, Button } from '@mui/material'
-import React,{useState, useEffect} from 'react'
+import React,{useState} from 'react'
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -7,6 +7,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { Link } from 'react-router-dom';
 
 function Socialmediapage() {
   const [facebookStoryChecked, setFacebookStoryChecked] = useState(false);
@@ -265,7 +266,9 @@ function Socialmediapage() {
       </Box>
     </Box>
   <Box sx={{display:'flex', justifyContent:'center', marginTop:10}}>
-   <Button variant="contained" sx={{color:'black',fontSize:20, width:100, border:'solid', backgroundColor:'#eed9c4',borderRadius:20,transition:'none','&:hover':{backgroundColor:'white'}}}>Post</Button>
+   <Button variant="contained" sx={{color:'black',fontSize:20, width:100, border:'solid', backgroundColor:'#eed9c4',borderRadius:20,transition:'none','&:hover':{backgroundColor:'white'}}}>
+    <Link to="/Postpopup" style={{ textDecoration: 'none', color: 'inherit'}}>Post</Link>
+    </Button>
     </Box>  
     </Box>
 

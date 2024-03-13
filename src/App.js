@@ -18,10 +18,16 @@ import Loghome from './pages/Loghome/Loghome';
 import Formcomplete from './pages/Formcomplete/Formcomplete';
 import ContentLibrary from './pages/ContentLibrary/ContentLibrary';
 import Business from './pages/Auth/Business/Business';
+import Analytics from './pages/Analytics/Analytics';
+import Facebookconnect from './pages/Auth/Facebookconnect/Facebookconnect';
+import EmailCampaign from './pages/EmailCampaign/EmailCampaign';
+import CreateEmailCampaign from './pages/CreateEmailCampaign/CreateEmailCampaign';
 import ContentLibrary1 from './pages/ContentLibrary1/ContentLibrary1';
 import ContentLibrary2 from './pages/ContentLibrary2/ContentLibrary2';
 import Socialmedia from './pages/Socialmedia/Socialmedia';
-
+import Postpopup from './pages/Postpopup/Postpopup';
+import Account from './pages/Account/Account';
+import Update from './pages/Update/Update';
 
 
 const router = createBrowserRouter([
@@ -90,6 +96,24 @@ const router = createBrowserRouter([
     element:<Business/>,
   },
   {
+    path: "/Analytics",
+    element:<Analytics/>,
+  },
+  {
+    path: "/Facebookconnect",
+    element:<Facebookconnect/>,
+  },
+  {
+    path: "/EmailCampaign",
+    element:<EmailCampaign/>,
+  },
+  {
+    path: "/CreateEmailCampaign",
+    element:<CreateEmailCampaign/>,
+  },
+
+
+  {
     path: "/ContentLibrary1",
     element:<ContentLibrary1/>,
   },
@@ -101,7 +125,18 @@ const router = createBrowserRouter([
     path: "/Socialmedia",
     element:<Socialmedia/>,
   },
-
+  {
+    path: "/Postpopup",
+    element:<Postpopup/>,
+  },
+  {
+    path: "/Account",
+    element:<Account/>,
+  },
+  {
+    path: "/Update",
+    element:<Update/>,
+  },
 
 ]);
 
@@ -125,9 +160,13 @@ function App() {
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/Loghome' element={<Loghome/>}/>
         <Route path='/Formcomplete' element={<Formcomplete/>}/>
+        <Route path='/Analytics' element={<Analytics/>}/>
+        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
         <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
         <Route path='/ContentLibrary2' element={<ContentLibrary2/>}/>
-        <Route path='/Socialmedia' element={<Socialmedia/>}/>
+        <Route path='/Postpopup' element={<Postpopup/>}/>
+        <Route path='/Account' element={<Account/>}/>
+        <Route path='/Update' element={<Update/>}/>
       </Routes>
     </RouterProvider>
   );
