@@ -15,6 +15,7 @@ function Emailconfirmpage(){
         <Link to="/Login" style={{ textDecoration: 'none', color: 'inherit'}}>Back to Login</Link>
       </Button>
     </Box>
+
     
     </Box>
   )

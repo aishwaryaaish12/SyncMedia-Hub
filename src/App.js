@@ -18,6 +18,9 @@ import Loghome from './pages/Loghome/Loghome';
 import Formcomplete from './pages/Formcomplete/Formcomplete';
 import ContentLibrary from './pages/ContentLibrary/ContentLibrary';
 import Business from './pages/Auth/Business/Business';
+import ContentLibrary1 from './pages/ContentLibrary1/ContentLibrary1';
+import ContentLibrary2 from './pages/ContentLibrary2/ContentLibrary2';
+import Socialmedia from './pages/Socialmedia/Socialmedia';
 import Analytics from './pages/Analytics/Analytics';
 import Facebookconnect from './pages/Auth/Facebookconnect/Facebookconnect';
 import EmailCampaign from './pages/EmailCampaign/EmailCampaign';
@@ -92,6 +95,19 @@ const router = createBrowserRouter([
     element:<Business/>,
   },
   {
+    path: "/ContentLibrary1",
+    element:<ContentLibrary1/>,
+  },
+  {
+    path: "/ContentLibrary2",
+    element:<ContentLibrary2/>,
+  },
+  {
+    path: "/Socialmedia",
+    element:<Socialmedia/>,
+  },
+
+  {
     path: "/Analytics",
     element:<Analytics/>,
   },
@@ -132,6 +148,9 @@ function App() {
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/Loghome' element={<Loghome/>}/>
         <Route path='/Formcomplete' element={<Formcomplete/>}/>
+        <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
+        <Route path='/ContentLibrary2' element={<ContentLibrary2/>}/>
+        <Route path='/Socialmedia' element={<Socialmedia/>}/>
         <Route path='/Analytics' element={<Analytics/>}/>
         <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
 

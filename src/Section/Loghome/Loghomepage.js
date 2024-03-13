@@ -41,7 +41,11 @@ function Loghomepage(){
         <Box component="img"sx={{ width:150, height:140, marginTop:2}}
         src="/Assets/undraw_Publish_post_re_wmql.png"alt="">
         </Box>
-        <Typography sx={{color:'white', marginLeft:5, paddingRight:2, marginTop:1}}>Publishing</Typography>
+        <Typography sx={{color:'white', marginLeft:5, paddingRight:2, marginTop:1}}>
+        <Link to="/ContentLibrary" style={{ textDecoration: 'none', color: 'inherit' }}>
+          Publishing
+        </Link>
+        </Typography>
       </Box>
     </Box>
     

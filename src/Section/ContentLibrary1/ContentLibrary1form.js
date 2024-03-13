@@ -1,10 +1,11 @@
-import React ,{useState}from 'react'
+import React, {useState} from 'react'
 import {Box, Typography, TextField, Button} from '@mui/material'
-import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
+import CloudUploadOutlinedIcon from '@mui/icons-material/CloudUploadOutlined';
 import EditIcon from '@mui/icons-material/Edit';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import {Link} from "react-router-dom"
 
-function ContentLibraryform(){
+function ContentLibrary1form({onVideoSelect}){
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (event) => {
@@ -21,7 +22,7 @@ function ContentLibraryform(){
       <Box
           component="img"
           sx={{ width: '40%',objectFit:'contain' }}
-          src="/Assets/undraw_Photograph_re_up3b.png"
+          src="/Assets/undraw_Video_streaming_re_v3qg.png"
           alt=" "
         />
 <Box>
@@ -32,13 +33,13 @@ function ContentLibraryform(){
       <Box>
       {!selectedFile &&(
     <label htmlFor="fileInput" style={{  marginTop: 10, color:'gray' }}>
-        <FileUploadOutlinedIcon fontSize="small" sx={{marginLeft:35, marginTop:13, color:'gray',cursor: 'pointer'}}/>
-        <Typography variant="body1" sx={{ marginLeft:28, color:'gray'}}>
-          Choose an image...
+        <CloudUploadOutlinedIcon fontSize="small" sx={{marginLeft:36, marginTop:13, color:'gray',cursor: 'pointer'}}/>
+        <Typography variant="body1" sx={{ marginLeft:30, color:'gray'}}>
+          Upload a video...
         </Typography>
         <input
             type="file"
-            accept="image/*"
+            accept="video/*"
             onChange={handleFileChange}
             style={{ display: 'none' }}
             id="fileInput"
@@ -47,11 +48,12 @@ function ContentLibraryform(){
       )}
       {selectedFile && (
         <Box sx={{ width: 200, height: 200, overflow: 'hidden', marginTop: 2, position: 'relative', marginLeft:24}}>
-        <img
+        <video
+          controls
+          style={{ width: '100%', height: '100%', objectFit: 'cover', marginBottom: 2 }}
           src={URL.createObjectURL(selectedFile)}
           alt=" "
-          style={{ width: '100%', height: '100%', objectFit: 'cover', marginBottom:2 }}
-        />
+          />
       </Box>
       )}  
       </Box>
@@ -67,17 +69,19 @@ function ContentLibraryform(){
 
     <Box sx={{display:'flex', flexDirection:'row', justifyContent:'center', gap:5}}>
      <Box sx={{marginTop: 3}}>
+     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black'}}>
+      <Link to="/ContentLibrary" style={{ textDecoration: 'none', color: 'inherit',color:'black'  }}>image</Link>
+     </Button>
+     </Box>
+     <Box sx={{marginTop: 3}}>
      <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black', fontWeight:'bold'}}>
-     <Link to="/ContentLibrary" style={{ textDecoration: 'none', color: 'inherit',color:'black'  }}>image</Link>
+     <Link to="/ContentLibrary1" style={{ textDecoration: 'none', color: 'inherit',color:'black'  }}>video</Link>
      </Button>
      </Box>
      <Box sx={{marginTop: 3}}>
      <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black'}}>
-       <Link to="/ContentLibrary1" style={{ textDecoration: 'none', color: 'inherit',color:'black'  }}>Video</Link>
-    </Button>
-     </Box>
-     <Box sx={{marginTop: 3}}>
-     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black'}}>Blog</Button>
+     <Link to="/ContentLibrary2" style={{ textDecoration: 'none', color: 'inherit',color:'black'}}>blog</Link>
+     </Button>
      </Box>
     </Box>
 
@@ -88,10 +92,10 @@ function ContentLibraryform(){
     <Box sx={{display:'flex', flexDirection:'row', gap:3, marginLeft:25}}>
     <Button variant="contained" sx={{color:'white', backgroundColor:'#2E1114','&:hover': {backgroundColor: '#2E1114',}}}>Draft</Button>
     <Button variant="contained" sx={{color:'white', backgroundColor:'#2E1114','&:hover': {backgroundColor: '#2E1114',}}}>
-      <Link to= "/Socialmedia" style={{ textDecoration: 'none', color: 'inherit'}}>
+    <Link to= "/Socialmedia" style={{ textDecoration: 'none', color: 'inherit'}}>
       Upload
-      </Link>
-      </Button>
+    </Link>
+    </Button>
     </Box>
 
     </Box>
@@ -100,4 +104,4 @@ function ContentLibraryform(){
   )
 }
 
-export default ContentLibraryform
+export default ContentLibrary1form
