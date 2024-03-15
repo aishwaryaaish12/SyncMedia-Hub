@@ -25,6 +25,12 @@ import Analytics from './pages/Analytics/Analytics';
 import Facebookconnect from './pages/Auth/Facebookconnect/Facebookconnect';
 import EmailCampaign from './pages/EmailCampaign/EmailCampaign';
 import CreateEmailCampaign from './pages/CreateEmailCampaign/CreateEmailCampaign';
+import Postpopup from './pages/Postpopup/Postpopup';
+import Account from './pages/Account/Account';
+import Update from './pages/Update/Update';
+import EmailcampaignTemplate from './pages/EmailcampaignTemplate/EmailcampaignTemplate';
+import EmailcampaignPopup from './pages/EmailcampaignPopup/EmailcampaignPopup';
+import AllCampaigns from './pages/AllCampaigns/AllCampaigns';
 
 
 
@@ -125,6 +131,42 @@ const router = createBrowserRouter([
   },
 
 
+  {
+    path: "/ContentLibrary1",
+    element:<ContentLibrary1/>,
+  },
+  {
+    path: "/ContentLibrary2",
+    element:<ContentLibrary2/>,
+  },
+  {
+    path: "/Socialmedia",
+    element:<Socialmedia/>,
+  },
+  {
+    path: "/Postpopup",
+    element:<Postpopup/>,
+  },
+  {
+    path: "/Account",
+    element:<Account/>,
+  },
+  {
+    path: "/Update",
+    element:<Update/>,
+  },
+  {
+    path: "/EmailcampaignTemplate",
+    element:<EmailcampaignTemplate/>,
+  },
+  {
+    path: "/EmailcampaignPopup",
+    element:<EmailcampaignPopup/>,
+  },
+  {
+    path: "/AllCampaigns",
+    element:<AllCampaigns/>,
+  },
 
 ]);
 
@@ -148,11 +190,24 @@ function App() {
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/Loghome' element={<Loghome/>}/>
         <Route path='/Formcomplete' element={<Formcomplete/>}/>
+        <Route path='/Analytics' element={<Analytics/>}/>
+        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
         <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
         <Route path='/ContentLibrary2' element={<ContentLibrary2/>}/>
+        <Route path='/Postpopup' element={<Postpopup/>}/>
+        <Route path='/Account' element={<Account/>}/>
+        <Route path='/Update' element={<Update/>}/>
         <Route path='/Socialmedia' element={<Socialmedia/>}/>
         <Route path='/Analytics' element={<Analytics/>}/>
         <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
+        <Route path='/CreateEmailCampaign' element={<CreateEmailCampaign/>}/>
+        <Route path='/EmailcampaignTemplate' element={<EmailcampaignTemplate/>}/>
+        <Route path='/EmailcampaignPopup' element={<EmailcampaignPopup/>}/>
+        <Route path='/AllCampaigns' element={<AllCampaigns/>}/>
+
+
+
+
 
 
 

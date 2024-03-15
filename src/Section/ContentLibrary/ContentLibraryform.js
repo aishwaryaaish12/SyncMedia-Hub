@@ -1,5 +1,5 @@
 import React ,{useState}from 'react'
-import {Box, Typography, TextField, Button} from '@mui/material'
+import {Box, Typography, TextField, Button, IconButton} from '@mui/material'
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
 import EditIcon from '@mui/icons-material/Edit';
 import {Link} from "react-router-dom"
@@ -56,11 +56,20 @@ function ContentLibraryform(){
       )}  
       </Box>
       <Box>
-      <Button
-            variant="outlined"
-            onClick={handleUploadAnotherImage} sx={{marginLeft:33, width:5, height:30, borderColor:'gray','&:hover': { borderColor: 'inherit', }, marginBottom:2}}>
-            <EditIcon fontSize='small' sx={{color:'gray'}}/>
-          </Button>
+      <IconButton
+                variant="outlined"
+                onClick={handleUploadAnotherImage}
+                sx={{
+                  marginLeft: 36,
+                  width: 5,
+                  height: 30,
+                  borderColor: 'gray',
+                  '&:hover': { borderColor: 'inherit' },
+                  marginBottom: 2,
+                }}
+              >
+                <EditIcon fontSize="small" sx={{ color: 'gray' }} />
+              </IconButton>
       </Box>
     </Box> 
 

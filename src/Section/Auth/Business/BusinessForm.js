@@ -15,10 +15,10 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 function BusinessForm() {
   const [selectedFile, setSelectedFile] = useState(null);
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 
   const handleFileUpload = () => {

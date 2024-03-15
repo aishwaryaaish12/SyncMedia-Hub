@@ -92,7 +92,6 @@ function LogNavbar(props) {
                         >
                           Whatsapp
                         </MenuItem>
-                        {/* Add more options as needed */}
                       </Menu>
                     </>
                   ) : (
@@ -131,7 +130,6 @@ function LogNavbar(props) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
-          {/* Adjust the drawer content as needed */}
           <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
               MUI

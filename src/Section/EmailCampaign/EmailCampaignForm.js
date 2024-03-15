@@ -19,7 +19,8 @@ function EmailCampaignForm() {
 Create Campaign
 </Link>
 </Button>
-        <Button variant="contained" sx={{backgroundColor:'#eed9c4',color:'black',width:200,height:50,marginLeft:12,marginTop:3,'&:hover': {backgroundColor: 'White'},}}>All Campaign</Button>
+        <Button variant="contained" sx={{backgroundColor:'#eed9c4',color:'black',width:200,height:50,marginLeft:12,marginTop:3,'&:hover': {backgroundColor: 'White'},}}><Link to="/AllCampaigns" style={{ textDecoration: 'none', color: 'inherit' }}>
+All Campaign</Link></Button>
 
         </Box>
       </Box>

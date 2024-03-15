@@ -24,6 +24,13 @@ import Analytics from '../Analytics/Analytics'
 import Facebookconnect from '../Auth/Facebookconnect/Facebookconnect'
 import EmailCampaign from '../EmailCampaign/EmailCampaign'
 import CreateEmailCampaign from '../CreateEmailCampaign/CreateEmailCampaign'
+import Postpopup from '../Postpopup/Postpopup'
+import Account from '../Account/Account'
+import Update from '../Update/Update'
+import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
+import EmailcampaignPopup from '../EmailcampaignPopup/EmailcampaignPopup'
+import AllCampaigns from '../AllCampaigns/AllCampaigns'
+
 
 function Home() {
 
@@ -52,6 +59,15 @@ function Home() {
         <Facebookconnect />
         <EmailCampaign />
         <CreateEmailCampaign />
+        <ContentLibrary1/>
+        <ContentLibrary2/>
+        <Socialmedia/>
+        <Postpopup/>
+        <Account/>
+        <Update/>
+        <EmailcampaignTemplate />
+        <EmailcampaignPopup />
+        <AllCampaigns />
     </Box> 
   )
 }
