@@ -18,7 +18,7 @@ const Emailverificationform = () => {
       <Typography variant="h6" sx={{ marginBottom: 5,marginTop: 4, fontWeight: 'bold',fontSize: 18, marginLeft:4, color:'black' }}>
         EMAIL VERIFICATION
       </Typography>
-      <FormControl fullWidth variant="outlined" sx={{ marginBottom: 5 , width: 250}}>
+      <FormControl fullWidth variant="outlined" sx={{ marginBottom: 5 , width: 250,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}}>
           <OutlinedInput placeholder="Enter your OTP" sx={{fontSize:14}} />
       </FormControl>
       <Button variant="contained" color="primary" fullWidth sx={{ color: 'black',  borderRadius: 20, width: 100, height: 40, marginBottom: 4, marginLeft: 10, fontSize: 14 ,backgroundColor:'#eed9c4', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>

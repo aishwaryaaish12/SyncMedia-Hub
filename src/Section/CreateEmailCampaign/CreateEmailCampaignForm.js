@@ -2,21 +2,31 @@ import React,{useState} from 'react'
 import { Box, Button, TextField, Typography,InputAdornment,Dialog } from '@mui/material';
 import { Link } from 'react-router-dom';
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
+import EditIcon from '@mui/icons-material/Edit';
 
 function CreateEmailCampaignForm(){
   const [selectedImage, setSelectedImage] = useState(null);
-  const [openDialog, setOpenDialog] = useState(false);
+  const [selectedFileTo, setSelectedFileTo] = useState(null);
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     setSelectedImage(file);
-    setOpenDialog(true);
 
   };
-  const handleCloseDialog = () => {
-    setOpenDialog(false);
+  const handleImageEdit = () => {
+    // Reset the selectedImage state to null
+    setSelectedImage(null);
   };
 
+  const handleFileToUpload = (event) => {
+    const file = event.target.files[0];
+    setSelectedFileTo(file);
+  };
+
+  const handleFileToEdit = () => {
+    // Reset the selectedFileTo state to null
+    setSelectedFileTo(null);
+  };
 
   
   return (
@@ -61,62 +71,143 @@ function CreateEmailCampaignForm(){
 </Box>
 <Box>
 <Box>
-            <Typography sx={{fontSize:20,marginLeft:73,marginTop:-56}}>Image</Typography>
-            <TextField id="outlined-basic"  variant="outlined" multiline rows={4.9} label={
-              <Typography sx={{marginTop:6,marginLeft:7}}>Upload Image</Typography>
-            }
- sx={{backgroundColor:'#eed9c4',marginLeft:85,width:300,height:145,marginTop:-6}}
- InputProps={{
-  endAdornment: (
-    <InputAdornment position="end">
-                          <label htmlFor="image-upload">
-
-      <FileUploadOutlinedIcon fontSize="small" sx={{cursor:'pointer'}}
-       />
-       </label>
-       <input
-                      type="file"
-                      id="image-upload"
-                      style={{ display: 'none' }}
-                      onChange={handleImageUpload}
+<Typography
+                sx={{ fontSize: 20, marginLeft: 73, marginTop: -56 }}
+              >
+                Image
+              </Typography>
+              <TextField
+  id="outlined-basic"
+                variant="outlined"
+                multiline
+                rows={4.9}
+                label={selectedImage ? null : 'Upload Image'}
+                sx={{
+                  backgroundColor: '#eed9c4',
+                  marginLeft: 85,
+                  width: 300,
+                  height: 145,
+                  marginTop: -6,
+                  position: 'relative',
+                  borderRadius: '4px',
+                  backgroundSize: '50% auto',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundImage: selectedImage
+                    ? `url(${URL.createObjectURL(selectedImage)})`
+                    : 'none',
+                    }}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                                        {selectedImage ? (
+                      <EditIcon
+                      fontSize='small'
+                      sx={{ cursor: 'pointer', color: '#888',position:'absolute',bottom:8,right:8 }}
+                      onClick={handleImageEdit} // Call handleImageEdit on EditIcon click
                     />
+                  ) : (
 
-    </InputAdornment>
-  ),
-}}
-
-/>  
-{selectedImage && (
-              <img
-                src={URL.createObjectURL(selectedImage)}
-                alt="Selected Image"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      <label htmlFor="image-upload">
+                        <FileUploadOutlinedIcon
+                          fontSize="small"
+                          sx={{ cursor: 'pointer',color:'#888' }}
+                        />
+                      </label>
+                  )}
+                      <input
+                        type="file"
+                        id="image-upload"
+                        style={{ display: 'none' }}
+                        onChange={handleImageUpload}
+                      />
+                    </InputAdornment>
+                  ),
+                }}
+                InputLabelProps={{
+                  sx: {
+                    color: '#888',
+                    fontSize: '16px',
+                    paddingTop:6,
+                    paddingLeft:7 
+                  },
+    
+                }}
               />
-            )}
-
-</Box>
+            </Box>
 <Box>
-  <Typography sx={{fontSize:20,marginLeft:73,marginTop:6}}>To</Typography>
+  <Typography sx={{fontSize:20,marginLeft:73,marginTop:6}}>From</Typography>
    <TextField id="outlined-basic"  variant="outlined" sx={{backgroundColor:'#eed9c4',marginLeft:85,width:300,marginTop:-3}} />  
 
 </Box>
 <Box>
-  <Typography sx={{fontSize:20,marginLeft:73,marginTop:5}}>From</Typography>
-  <TextField id="outlined-basic"  variant="outlined" multiline rows={5.9} label={
-      <Typography sx={{marginLeft:9,marginTop:7}}>Upload File</Typography>}
-
-   sx={{backgroundColor:'#eed9c4',marginLeft:85,width:300,height:170,marginTop:-3}} 
-   InputProps={{
-    endAdornment: (
-      <InputAdornment position="end">
-        <FileUploadOutlinedIcon fontSize="small" sx={{cursor:'pointer'}}
-         />
-      </InputAdornment>
-    ),
-  }}
-  />
-
-</Box>
+  <Typography sx={{fontSize:20,marginLeft:73,marginTop:5}}>To</Typography>
+  <TextField
+            id="outlined-basic"
+            variant="outlined"
+            multiline
+            rows={5.9}
+            label={
+              selectedFileTo ? (
+                <Typography
+                  sx={{
+                    color: 'black',
+                    overflow: 'hidden',
+                    whiteSpace: 'pre-wrap',
+                    textOverflow: 'ellipsis',
+                    wordWrap: 'break-word',                  }}
+                >
+                  {selectedFileTo.name}
+                </Typography>
+              ) : (
+                'Upload File'
+              )
+            }
+            sx={{
+              backgroundColor: '#eed9c4',
+              marginLeft: 85,
+              width: 300,
+              height: 170,
+              marginTop: -3,
+              position: 'relative',
+              borderRadius: '4px',
+            }}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position='end'>
+                {selectedFileTo ? (
+                  <EditIcon
+                    fontSize='small'
+                    sx={{ cursor: 'pointer', color: '#888',position:'absolute',bottom:8,right:8 }}
+                    onClick={handleFileToEdit} // Call handleFileToEdit on EditIcon click
+                  />
+                ) : (
+              <label htmlFor="file-to-upload">
+                    <FileUploadOutlinedIcon
+                      fontSize="small"
+                      sx={{ cursor: 'pointer',color:'#888' }}
+                    />
+                  </label>
+                )}
+                  <input
+                    type="file"
+                    id="file-to-upload"
+                    style={{ display: 'none' }}
+                    onChange={handleFileToUpload}
+                  />
+                </InputAdornment>
+              ),
+            }}
+            InputLabelProps={{
+              sx: {
+                color: selectedFileTo ? 'black' : '#888',
+                fontSize: '16px',
+                paddingTop: 6,
+                paddingLeft: 1
+              },
+            }}
+          />
+        </Box>
 </Box>
 <Box>
 <Button variant="contained" sx={{marginLeft:65,marginTop:5,width:150,height:50,backgroundColor:'#eed9c4',color:'black','&:hover': {backgroundColor: 'White'},fontSize:23}}>

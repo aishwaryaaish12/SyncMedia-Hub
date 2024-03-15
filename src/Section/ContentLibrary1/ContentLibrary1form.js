@@ -6,13 +6,13 @@ import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import {Link} from "react-router-dom"
 
 function ContentLibrary1form({onVideoSelect}){
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedVideo, setSelectedFile] = useState(null);
 
-  const handleFileChange = (event) => {
+  const handleVideoChange = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
   };
-  const handleUploadAnotherImage = () => {
+  const handleUploadAnotherVideo = () => {
     setSelectedFile(null);
   };
   return (
@@ -28,69 +28,81 @@ function ContentLibrary1form({onVideoSelect}){
 <Box>
     <Box >
       <Typography variant='h4' sx={{marginLeft:17, color:'black'}}>CONTANT LIBRARY</Typography>
-    </Box>  
-    <Box sx={{display:'flex', flexDirection:'column',backgroundColor:'white', borderRadius:2, gap:3, marginTop:5}}>
-      <Box>
-      {!selectedFile &&(
-    <label htmlFor="fileInput" style={{  marginTop: 10, color:'gray' }}>
-        <CloudUploadOutlinedIcon fontSize="small" sx={{marginLeft:36, marginTop:13, color:'gray',cursor: 'pointer'}}/>
-        <Typography variant="body1" sx={{ marginLeft:30, color:'gray'}}>
-          Upload a video...
-        </Typography>
-        <input
-            type="file"
-            accept="video/*"
-            onChange={handleFileChange}
-            style={{ display: 'none' }}
-            id="fileInput"
-          />
-      </label>
-      )}
-      {selectedFile && (
-        <Box sx={{ width: 200, height: 200, overflow: 'hidden', marginTop: 2, position: 'relative', marginLeft:24}}>
-        <video
-          controls
-          style={{ width: '100%', height: '100%', objectFit: 'cover', marginBottom: 2 }}
-          src={URL.createObjectURL(selectedFile)}
-          alt=" "
-          />
-      </Box>
-      )}  
-      </Box>
-      <Box>
-      <Button
-            variant="outlined"
-            onClick={handleUploadAnotherImage} sx={{marginLeft:33, width:5, height:30, borderColor:'gray','&:hover': { borderColor: 'inherit', }, marginBottom:2}}>
-            <EditIcon fontSize='small' sx={{color:'gray'}}/>
-          </Button>
-      </Box>
     </Box> 
 
+    <Box sx={{width:600, height:300,backgroundColor:'white', marginTop:5, borderRadius:5, position:'relative', display:'flex',justifyContent:'center',alignItems:'center'}}>
+    <Box>
+    <Box sx={{ width: 250, height: 200, borderStyle: 'dashed', borderColor: 'gray', position: 'relative', marginBottom: 2 }}>
+      <input
+        accept="video/*"  // Accept video files
+        style={{ display: 'none' }}
+        id="video-upload"
+        type="file"
+        onChange={handleVideoChange}  // Change the event handler to handle video upload
+      />
+      {!selectedVideo && (
+        <>
+          <CloudUploadOutlinedIcon
+            sx={{ marginTop: 9, marginLeft: 14, cursor: 'pointer', position: 'absolute' }}
+            onClick={() => document.getElementById('video-upload').click()}
+          />
+          <Typography sx={{ marginTop: 13, marginLeft: 9 }}>Upload Video</Typography>
+        </>
+      )}
+      {selectedVideo && (
+        <Box sx={{ position: 'absolute', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <video controls style={{ width: '100%', height: '100%', objectFit:'cover' }} src={URL.createObjectURL(selectedVideo)} />
+        </Box>
+      )}
+      <Box>
+        <Button
+          variant="outlined"
+          onClick={handleUploadAnotherVideo}
+          sx={{
+            color: 'gray',
+            marginTop: 27,
+            marginLeft: 12,
+            borderColor: 'black',
+            '&:hover': { borderColor: 'black' },
+            '&:active': { borderColor: 'black' },
+          }}
+        >
+          <EditIcon fontSize='small' />
+        </Button>
+      </Box>
+    </Box>
+
+    </Box>
+    </Box>
 
     <Box sx={{display:'flex', flexDirection:'row', justifyContent:'center', gap:5}}>
      <Box sx={{marginTop: 3}}>
-     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black'}}>
+     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black', borderColor:'black','&:hover': {borderColor: 'black',  },'&:active': {borderColor: 'black', }}}>
       <Link to="/ContentLibrary" style={{ textDecoration: 'none', color: 'inherit',color:'black'  }}>image</Link>
      </Button>
      </Box>
      <Box sx={{marginTop: 3}}>
-     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black', fontWeight:'bold'}}>
+     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black', fontWeight:'bold', borderColor:'black','&:hover': {borderColor: 'black',  },'&:active': {borderColor: 'black', }}}>
      <Link to="/ContentLibrary1" style={{ textDecoration: 'none', color: 'inherit',color:'black'  }}>video</Link>
      </Button>
      </Box>
      <Box sx={{marginTop: 3}}>
-     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black'}}>
+     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black', borderColor:'black','&:hover': {borderColor: 'black',  },'&:active': {borderColor: 'black', }}}>
      <Link to="/ContentLibrary2" style={{ textDecoration: 'none', color: 'inherit',color:'black'}}>blog</Link>
      </Button>
      </Box>
     </Box>
 
     <Box sx={{marginTop:3}}>
-    <TextField label="Enter the description here" id="outlined-multiline-static" multiline rows={4} sx={{ marginBottom: 3, width: 600, backgroundColor:'white', borderRadius:1}} />
+    <TextField placeholder='Enter the description here' id="outlined-multiline-static" multiline rows={4} sx={{ marginBottom: 3, width: 600, backgroundColor:'white', borderRadius:1,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }}}} />
     </Box>
 
     <Box sx={{display:'flex', flexDirection:'row', gap:3, marginLeft:25}}>
-    <Button variant="contained" sx={{color:'white', backgroundColor:'#2E1114','&:hover': {backgroundColor: '#2E1114',}}}>Draft</Button>
+    <Button variant="contained" sx={{color:'white', backgroundColor:'#2E1114','&:hover': {backgroundColor: '#2E1114',}}}>
+      <Link to= "/Draft" style={{ textDecoration: 'none', color: 'inherit'}}>
+      Draft
+      </Link>
+      </Button>
     <Button variant="contained" sx={{color:'white', backgroundColor:'#2E1114','&:hover': {backgroundColor: '#2E1114',}}}>
     <Link to= "/Socialmedia" style={{ textDecoration: 'none', color: 'inherit'}}>
       Upload

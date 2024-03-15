@@ -34,15 +34,17 @@ function SignUpForm() {
           <Typography variant="h6" sx={{ marginBottom: 4, fontWeight: 'bold',fontSize: 20, marginTop:5, marginLeft:18 , color:'black' }}>
             Sign Up
           </Typography>
-          <TextField label="Name" fullWidth variant="outlined" sx={{ marginBottom: 6 , width: 350, }} InputProps={{ startAdornment: (<InputAdornment position='start'><EmailIcon color='action' /> </InputAdornment>) }} />
+          <TextField label="Name" fullWidth variant="outlined" sx={{ marginBottom: 6 , width: 350,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }}, }} InputProps={{ startAdornment: (<InputAdornment position='start'><EmailIcon color='action' /> </InputAdornment>) }} InputLabelProps={{ 
+            sx: { color: 'black','&.Mui-focused':{color:'black'} } }}  />
 
-          <TextField label="Email ID" fullWidth variant="outlined" sx={{ marginBottom: 6 , width: 350}} InputProps={{ startAdornment: (<InputAdornment position='start'><EmailIcon color='action' /> </InputAdornment>) }} />
+          <TextField label="Email ID" fullWidth variant="outlined" sx={{ marginBottom: 6 , width: 350,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}} InputProps={{ startAdornment: (<InputAdornment position='start'><EmailIcon color='action' /> </InputAdornment>) }}InputLabelProps={{ 
+            sx: { color: 'black','&.Mui-focused':{color:'black'} } }}  />
           <TextField
           label="Password"
           type={showPassword ? 'text' : 'password'}
           fullWidth
           variant="outlined"
-          sx={{ marginBottom: 6, width: 350 }}
+          sx={{ marginBottom: 6, width: 350 ,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}}
           InputProps={{
             startAdornment: (
               <InputAdornment position='start'>
@@ -56,14 +58,15 @@ function SignUpForm() {
                 </IconButton>
               </InputAdornment>
             ),
-          }}
+          }}InputLabelProps={{ 
+            sx: { color: 'black','&.Mui-focused':{color:'black'} } }} 
         />
         <TextField
           label="Confirm Password"
           type={showConfirmPassword ? 'text' : 'password'}
           fullWidth
           variant="outlined"
-          sx={{ marginBottom: 3, width: 350}}
+          sx={{ marginBottom: 3, width: 350, '& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}}
           InputProps={{
             startAdornment: (
               <InputAdornment position='start'>
@@ -77,7 +80,8 @@ function SignUpForm() {
                 </IconButton>
               </InputAdornment>
             ),
-          }}
+          }}InputLabelProps={{ 
+            sx: { color: 'black','&.Mui-focused':{color:'black'} } }} 
         />
 
           <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', fontWeight: 'bold', borderRadius: 20, width: 200, height: 50, marginBottom: 2, marginLeft: 10, fontSize: 20 ,backgroundColor:'#eed9c4', transition: 'none', '&:hover': {backgroundColor:'White'},}}>

@@ -26,6 +26,10 @@ import Socialmedia from '../Socialmedia/Socialmedia'
 import Postpopup from '../Postpopup/Postpopup'
 import Account from '../Account/Account'
 import Update from '../Update/Update'
+import Whatsappcampaign from '../Whatsappcampaign/Whatsappcampaign'
+import Createwhatsappcampaign from '../Createwhatsappcampaign/Createwhatsappcampaign'
+import Draft from '../Draft/Draft'
+import Contentcalendar from '../Contentcalendar/Contentcalendar'
 
 
 function Home() {
@@ -48,6 +52,9 @@ function Home() {
         <Loghome/>
         <ContentLibrary/>
         <Business/>
+        <ContentLibrary1/>
+        <ContentLibrary2/>
+        <Socialmedia/>
         <Analytics />
         <Facebookconnect />
         <EmailCampaign />
@@ -58,6 +65,10 @@ function Home() {
         <Postpopup/>
         <Account/>
         <Update/>
+        <Whatsappcampaign/>
+        <Createwhatsappcampaign/>
+        <Draft/>
+        <Contentcalendar/>
     </Box> 
   )
 }

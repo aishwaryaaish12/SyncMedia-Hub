@@ -59,15 +59,15 @@ sx={{width:685,height:600,marginLeft:-115,position:'fixed',marginBottom:25}}
       <Box sx={{marginLeft:25}}>
           <Box>
             <Typography  sx={{marginLeft:-130,marginTop:10,fontSize:20}}>Company Name  </Typography>
-            <TextField id="outlined-basic"  variant="outlined" sx={{marginLeft:-108,marginTop:-5,width:300}} />
+            <TextField id="outlined-basic"  variant="outlined" sx={{marginLeft:-108,marginTop:-5,width:300,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}} />
             </Box>
           <Box>
             <Typography sx={{marginLeft:-130,fontSize:20,marginTop:3}}>Product Name </Typography>
-            <TextField id="outlined-basic"  variant="outlined" sx={{marginLeft:-108,marginTop:-4,width:300}} />
+            <TextField id="outlined-basic"  variant="outlined" sx={{marginLeft:-108,marginTop:-4,width:300,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}} />
             </Box>
           <Box>
           <Typography sx={{marginLeft:-130,fontSize:20,marginTop:3}}>Email ID </Typography>
-          <TextField id="outlined-basic"  variant="outlined" sx={{marginLeft:-108,marginTop:-3,width:300}} />
+          <TextField id="outlined-basic"  variant="outlined" sx={{marginLeft:-108,marginTop:-3,width:300,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}} />
 
  
           </Box>
@@ -76,12 +76,12 @@ sx={{width:685,height:600,marginLeft:-115,position:'fixed',marginBottom:25}}
 <Box>
   <Box>
 <Typography sx={{fontSize:20,marginLeft:-65,marginTop:10}}>Address</Typography>
-<TextField id="outlined-basic"  variant="outlined" sx={{marginLeft:-51,marginTop:-5,width:300}} />
+<TextField id="outlined-basic"  variant="outlined" sx={{marginLeft:-51,marginTop:-5,width:300,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}} />
 
 
   </Box>
   <Box>
-  <Typography sx={{fontSize:20,marginLeft:-65,marginTop:4}}>Logo</Typography>
+  <Typography sx={{fontSize:20,marginLeft:-65,marginTop:4,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}}>Logo</Typography>
 <TextField id="outlined-basic"  variant="outlined" label={
     selectedFile
     ? ''  
@@ -100,7 +100,7 @@ InputProps={{
       />
     ),
   }}
-sx={{marginLeft:-51,marginTop:-5,width:300}} 
+sx={{marginLeft:-51,marginTop:-5,width:300,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}} 
 value={selectedFile ? selectedFile.name : ''} />
           <input
             type="file"
@@ -114,7 +114,7 @@ value={selectedFile ? selectedFile.name : ''} />
 
   <Box>
   <Typography sx={{fontSize:20,marginLeft:-65,marginTop:4}}>Phone No</Typography>
-<TextField id="outlined-basic"  variant="outlined" sx={{marginLeft:-51,marginTop:-5,width:300}} />
+<TextField id="outlined-basic"  variant="outlined" sx={{marginLeft:-51,marginTop:-5,width:300,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}} />
 
   </Box>
   </Box>
