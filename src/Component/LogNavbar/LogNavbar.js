@@ -18,12 +18,16 @@ import { Link } from 'react-router-dom';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
-const drawerWidth = '100%';
+const drawerWidth = '40%';
 const navItems = ['HOME', 'BUSINESS', 'ANALYTICS', 'CONTENT LIBRARY', 'CAMPAIGN'];
 
 function LogNavbar(props) {
   const { window } = props;
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [campaignAnchor, setCampaignAnchor] = React.useState(null);
 
@@ -38,7 +42,8 @@ function LogNavbar(props) {
   const handleCampaignMenuClose = () => {
     setCampaignAnchor(null);
   };
-
+ 
+  
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
@@ -65,7 +70,7 @@ function LogNavbar(props) {
                 SyncMedia Hub
               </Typography>
             </Box>
-            <Box sx={{ display: 'flex', gap: 7, paddingRight: 5 }}>
+           {matches&& <Box sx={{ display: 'flex', gap: 7, paddingRight: 5 }}>
               {navItems.map((item) => (
                 <React.Fragment key={item}>
                   {item === 'CAMPAIGN' ? (
@@ -112,7 +117,7 @@ function LogNavbar(props) {
               <IconButton color="inherit" component={Link} to="/account" style={{ textDecoration: 'none', color: 'black' }}>
                 <AccountCircleIcon />
               </IconButton>
-            </Box>
+            </Box>}
           </Toolbar>
         </AppBar>
       </Box>
@@ -131,14 +136,14 @@ function LogNavbar(props) {
           }}
         >
           <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-              MUI
+            <Typography variant="h6" sx={{ my: 2,color: 'black',fontFamily: 'cursive' }}>
+              SyncMedia Hub
             </Typography>
             <Divider />
             <List>
               {navItems.map((item) => (
                 <ListItem key={item} disablePadding>
-                  <ListItemButton sx={{ textAlign: 'center' }}>
+                  <ListItemButton sx={{ textAlign: 'left',paddingTop:0.5,paddingLeft:3 }}>
                     <ListItemText primary={item} />
                   </ListItemButton>
                 </ListItem>

@@ -20,6 +20,9 @@ import Analytics from '../Analytics/Analytics'
 import Facebookconnect from '../Auth/Facebookconnect/Facebookconnect'
 import EmailCampaign from '../EmailCampaign/EmailCampaign'
 import CreateEmailCampaign from '../CreateEmailCampaign/CreateEmailCampaign'
+import Postpopup from '../Postpopup/Postpopup'
+import Account from '../Account/Account'
+import Update from '../Update/Update'
 import ContentLibrary1 from '../ContentLibrary1/ContentLibrary1'
 import ContentLibrary2 from '../ContentLibrary2/ContentLibrary2'
 import Socialmedia from '../Socialmedia/Socialmedia'
@@ -32,6 +35,13 @@ import AllCampaigns from '../AllCampaigns/AllCampaigns'
 import Whatsappcampaign from '../Whatsappcampaign/Whatsappcampaign'
 import Createwhatsappcampaign from '../Createwhatsappcampaign/Createwhatsappcampaign'
 import Draft from '../Draft/Draft'
+import Contentcalendar from '../Contentcalendar/Contentcalendar.js'
+import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
+import EmailcampaignPopup from '../EmailcampaignPopup/EmailcampaignPopup'
+import AllCampaigns from '../AllCampaigns/AllCampaigns'
+import WhatsappCampainTemplate from '../WhatsappCampaignTemplate/WhatsappCampaignTemplate'
+import WhatsapPopup from '../WhatsapPopup/WhatsapPopup'
+import Whatsappallcampaign from '../Whatsappallcampaign/Whatsappallcampaign'
 import Schedule from '../Schedule/Schedule'
 
 
@@ -71,6 +81,13 @@ function Home() {
         <Whatsappcampaign/>
         <Createwhatsappcampaign/>
         <Draft/>
+        <Contentcalendar/>
+        <EmailcampaignTemplate />
+        <EmailcampaignPopup />
+        <AllCampaigns />
+        <WhatsappCampainTemplate />
+        <WhatsapPopup />
+        <Whatsappallcampaign />
         <Schedule/>
     </Box> 
   )

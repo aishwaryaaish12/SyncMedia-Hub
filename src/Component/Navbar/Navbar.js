@@ -15,12 +15,18 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 
-const drawerWidth = '100%';
+const drawerWidth = '40%';
 const navItems = ['HOME', 'SERVICES', 'ABOUT US', 'CONTACT US'];
+
 function Navbar(props) {
+
   const { window } = props;
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -29,14 +35,14 @@ function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+      <Typography variant="h6" sx={{ my: 2,color: 'black',fontFamily: 'cursive' }}>
+        SyncMedia Hub
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'left', paddingLeft:3, paddingTop:0.5}}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -66,25 +72,25 @@ function Navbar(props) {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ color: 'black', flexGrow: 1, display: { xs: 'none', sm: 'block' },fontFamily:'cursive' }}
-              >
+                sx={{ color: 'black', flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontFamily: 'cursive' }}>
                 SyncMedia Hub
               </Typography>
             </Box>
-            <Box sx={{ display: 'flex', gap: 8, paddingRight: 10 }}>
+
+            {matches && <Box sx={{ display: 'flex', gap: 8, paddingRight: 10 }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: 'black'}}>
+                <Button key={item} sx={{ color: 'black' }}>
                   {item === 'HOME' ? (
-                  <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <Typography sx={{ fontWeight: 'medium', fontFamily:'revert'}}>
-                  {item}
-                  </Typography>
-                  </Link>) : (<Link to={`/${item.toLowerCase().replace(/\s/g, '')}`} style={{ textDecoration: 'none',color:'inherit' }}>
-                      <Typography sx={{ fontWeight: 'medium', fontFamily:'revert'}}>{item}</Typography>
-                    </Link>)} 
+                    <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <Typography sx={{ fontWeight: 'medium', fontFamily: 'revert' }}>
+                        {item}
+                      </Typography>
+                    </Link>) : (<Link to={`/${item.toLowerCase().replace(/\s/g, '')}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <Typography sx={{ fontWeight: 'medium', fontFamily: 'revert' }}>{item}</Typography>
+                    </Link>)}
                 </Button>
               ))}
-            </Box>
+            </Box>}
           </Toolbar>
         </AppBar>
       </Box>
@@ -95,7 +101,7 @@ function Navbar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, 
+            keepMounted: true,
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },

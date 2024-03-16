@@ -41,7 +41,7 @@ function Accountpage () {
   sx={{width:685,height:600,marginLeft:-115,position:'fixed',marginBottom:25}}
   />
           <Box sx={{display: 'flex',flexDirection: 'column',alignItems: 'center' }}>
-           <Typography variant='h3'sx={{marginTop:-4,marginLeft:90,marginBottom:5,whiteSpace: 'nowrap'}}>PROFILE</Typography>
+           <Typography variant='h3'sx={{marginTop:-4,marginLeft:95,marginBottom:5,whiteSpace: 'nowrap'}}>PROFILE</Typography>
           </Box>
         <Box sx={{marginLeft:80}}>
             <Box>

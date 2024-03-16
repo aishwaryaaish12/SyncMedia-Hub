@@ -95,7 +95,7 @@ function ContentLibraryform(){
     </Box>
 
     <Box>
-    <Button variant="contained" sx={{color:'black',marginLeft:31, backgroundColor:'#eed9c4',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',transition:'none','&:hover':{backgroundColor:'white'}}}>
+    <Button variant="contained" sx={{color:'black',border:'solid',borderRadius:4,marginLeft:31, backgroundColor:'#eed9c4',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',transition:'none','&:hover':{backgroundColor:'white'}}}>
       <Link to= "/Schedule" style={{ textDecoration: 'none', color: 'inherit'}}>
        Schedule
       </Link>

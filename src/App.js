@@ -17,22 +17,29 @@ import Loghome from './pages/Loghome/Loghome';
 import Formcomplete from './pages/Formcomplete/Formcomplete';
 import ContentLibrary from './pages/ContentLibrary/ContentLibrary';
 import Business from './pages/Auth/Business/Business';
+import ContentLibrary1 from './pages/ContentLibrary1/ContentLibrary1';
+import ContentLibrary2 from './pages/ContentLibrary2/ContentLibrary2';
 import Socialmedia from './pages/Socialmedia/Socialmedia';
 import Analytics from './pages/Analytics/Analytics';
 import Facebookconnect from './pages/Auth/Facebookconnect/Facebookconnect';
 import EmailCampaign from './pages/EmailCampaign/EmailCampaign';
 import CreateEmailCampaign from './pages/CreateEmailCampaign/CreateEmailCampaign';
-import ContentLibrary1 from './pages/ContentLibrary1/ContentLibrary1';
-import ContentLibrary2 from './pages/ContentLibrary2/ContentLibrary2';
 import Postpopup from './pages/Postpopup/Postpopup';
 import Account from './pages/Account/Account';
 import Update from './pages/Update/Update';
-import EmailcampaignTemplate from './pages/EmailcampaignTemplate/EmailcampaignTemplate';
-import EmailcampaignPopup from './pages/EmailcampaignPopup/EmailcampaignPopup';
-import AllCampaigns from './pages/AllCampaigns/AllCampaigns';
 import Whatsappcampaign from './pages/Whatsappcampaign/Whatsappcampaign';
 import Createwhatsappcampaign from './pages/Createwhatsappcampaign/Createwhatsappcampaign';
 import Draft from './pages/Draft/Draft';
+import Contentcalendar from './pages/Contentcalendar/Contentcalendar.js';
+import EmailcampaignTemplate from './pages/EmailcampaignTemplate/EmailcampaignTemplate';
+import EmailcampaignPopup from './pages/EmailcampaignPopup/EmailcampaignPopup';
+import AllCampaigns from './pages/AllCampaigns/AllCampaigns';
+import WhatsappCampainTemplate from './pages/WhatsappCampaignTemplate/WhatsappCampaignTemplate';
+import WhatsapPopup from './pages/WhatsapPopup/WhatsapPopup';
+import Whatsappallcampaign from './pages/Whatsappallcampaign/Whatsappallcampaign';
+
+
+
 import Schedule from './pages/Schedule/Schedule';
 
 const router = createBrowserRouter([
@@ -97,6 +104,14 @@ const router = createBrowserRouter([
     element:<ContentLibrary/>,
   },
   {
+    path: "/ContentLibrary1",
+    element:<ContentLibrary1/>,
+  },
+  {
+    path: "/ContentLibrary2",
+    element:<ContentLibrary2/>,
+  },
+  {
     path: "/Business",
     element:<Business/>,
   },
@@ -118,14 +133,6 @@ const router = createBrowserRouter([
   },
 
 
-  {
-    path: "/ContentLibrary1",
-    element:<ContentLibrary1/>,
-  },
-  {
-    path: "/ContentLibrary2",
-    element:<ContentLibrary2/>,
-  },
   {
     path: "/Socialmedia",
     element:<Socialmedia/>,
@@ -167,9 +174,39 @@ const router = createBrowserRouter([
     element:<Draft/>,
   },
   {
+    path: "/Contentcalendar",
+    element:<Contentcalendar/>,
+  },
+  {
+    path: "/EmailcampaignTemplate",
+    element:<EmailcampaignTemplate/>,
+  },
+  {
+    path: "/EmailcampaignPopup",
+    element:<EmailcampaignPopup/>,
+  },
+  {
+    path: "/AllCampaigns",
+    element:<AllCampaigns/>,
+  },
+  {
+    path: "/WhatsappCampaignTemplate",
+    element:<WhatsappCampainTemplate/>,
+  },
+  {
+    path: "/WhatsapPopup",
+    element:<WhatsapPopup/>,
+  },
+  {
+    path: "/Whatsappallcampaign",
+    element:<Whatsappallcampaign/>,
+  },
+  {
     path: "/Schedule",
     element:<Schedule/>,
   },
+
+
 
 ]);
 
@@ -197,6 +234,13 @@ function App() {
         <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
         <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
         <Route path='/ContentLibrary2' element={<ContentLibrary2/>}/>
+        <Route path='/Socialmedia' element={<Socialmedia/>}/>
+        <Route path='/Analytics' element={<Analytics/>}/>
+        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
+        <Route path='/Analytics' element={<Analytics/>}/>
+        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
+        <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
+        <Route path='/ContentLibrary2' element={<ContentLibrary2/>}/>
         <Route path='/Analytics' element={<Analytics/>}/>
         <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
         <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
@@ -207,6 +251,10 @@ function App() {
         <Route path='/Postpopup' element={<Postpopup/>}/>
         <Route path='/Account' element={<Account/>}/>
         <Route path='/Update' element={<Update/>}/>
+        <Route path='/Whatsappcampaign' element={<Whatsappcampaign/>}/>
+        <Route path='/Createwhatsappcampaign' element={<Createwhatsappcampaign/>}/>
+        <Route path='/Draft' element={<Draft/>}/>
+        <Route path='/Contentcalendar' element={<Contentcalendar/>}/>
         <Route path='/Socialmedia' element={<Socialmedia/>}/>
         <Route path='/Analytics' element={<Analytics/>}/>
         <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
@@ -214,6 +262,9 @@ function App() {
         <Route path='/EmailcampaignTemplate' element={<EmailcampaignTemplate/>}/>
         <Route path='/EmailcampaignPopup' element={<EmailcampaignPopup/>}/>
         <Route path='/AllCampaigns' element={<AllCampaigns/>}/>
+        <Route path='/WhatsappCampaignTemplate' element={<WhatsappCampainTemplate/>}/>
+        <Route path='/WhatsapPopup' element={<WhatsapPopup/>}/>
+        <Route path='/Whatsappallcampaign' element={<Whatsappallcampaign/>}/>
         <Route path='/Whatsappcampaign' element={<Whatsappcampaign/>}/>
         <Route path='/Createwhatsappcampaign' element={<Createwhatsappcampaign/>}/>
         <Route path='/Draft' element={<Draft/>}/>
