@@ -96,18 +96,13 @@ function ContentLibrary1form({onVideoSelect}){
     <Box sx={{marginTop:3}}>
     <TextField placeholder='Enter the description here' id="outlined-multiline-static" multiline rows={4} sx={{ marginBottom: 3, width: 600, backgroundColor:'white', borderRadius:1,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }}}} />
     </Box>
-
-    <Box sx={{display:'flex', flexDirection:'row', gap:3, marginLeft:25}}>
-    <Button variant="contained" sx={{color:'white', backgroundColor:'#2E1114','&:hover': {backgroundColor: '#2E1114',}}}>
-      <Link to= "/Draft" style={{ textDecoration: 'none', color: 'inherit'}}>
-      Draft
+     
+     <Box>
+    <Button variant="contained" sx={{color:'black',marginLeft:31, backgroundColor:'#eed9c4',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',transition:'none','&:hover':{backgroundColor:'white'}}}>
+      <Link to= "/Schedule" style={{ textDecoration: 'none', color: 'inherit'}}>
+       Schedule
       </Link>
       </Button>
-    <Button variant="contained" sx={{color:'white', backgroundColor:'#2E1114','&:hover': {backgroundColor: '#2E1114',}}}>
-    <Link to= "/Socialmedia" style={{ textDecoration: 'none', color: 'inherit'}}>
-      Upload
-    </Link>
-    </Button>
     </Box>
 
     </Box>

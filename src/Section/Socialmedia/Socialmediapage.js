@@ -81,7 +81,7 @@ function Socialmediapage() {
     <Box sx={{display:'flex', flexDirection:'row', gap:2, marginTop:8}}>
 
 
-      <Box sx={{display:'flex', flexDirection:'column', backgroundColor:'white'}}>
+      <Box sx={{display:'flex', flexDirection:'column', backgroundColor:'white', borderRadius:2,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
         <Box sx={{display:'flex', flexDirection:'row', marginLeft:8, marginTop:2, width:190}}>
         <FacebookIcon />
         <Typography sx={{fontSize:18, marginLeft:1}}> Facebook</Typography>
@@ -116,7 +116,7 @@ function Socialmediapage() {
       <Box sx={{display:'flex', flexDirection:'row', gap:2}}>
 
 
- <Box sx={{display:'flex', flexDirection:'column', backgroundColor:'white'}}>
+ <Box sx={{display:'flex', flexDirection:'column', backgroundColor:'white', borderRadius:2,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
   <Box sx={{display:'flex', flexDirection:'row', marginLeft:9, marginTop:2, width:190}}>
   <InstagramIcon />
   <Typography sx={{fontSize:18, marginLeft:1}}> Instagram</Typography>
@@ -161,7 +161,7 @@ function Socialmediapage() {
       <Box sx={{display:'flex', flexDirection:'row', gap:2}}>
 
 
-<Box sx={{display:'flex', flexDirection:'column', backgroundColor:'white'}}>
+<Box sx={{display:'flex', flexDirection:'column', backgroundColor:'white', borderRadius:2,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
   <Box sx={{display:'flex', flexDirection:'row', marginLeft:10, marginTop:2, width:190}}>
   <LinkedInIcon />
   <Typography sx={{fontSize:18, marginLeft:1}}> LinkedIn</Typography>
@@ -187,7 +187,7 @@ function Socialmediapage() {
       <Box sx={{display:'flex', flexDirection:'row', gap:2}}>
 
 
-<Box sx={{display:'flex', flexDirection:'column', backgroundColor:'white'}}>
+<Box sx={{display:'flex', flexDirection:'column', backgroundColor:'white', borderRadius:2, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
   <Box sx={{display:'flex', flexDirection:'row', marginLeft:10,marginTop:2, width:190}}>
   <TwitterIcon />
   <Typography sx={{fontSize:18, marginLeft:1}}> Twitter</Typography>
@@ -232,7 +232,7 @@ function Socialmediapage() {
       <Box sx={{display:'flex', flexDirection:'row', gap:2}}>
 
 
-<Box sx={{display:'flex', flexDirection:'column', backgroundColor:'white'}}>
+<Box sx={{display:'flex', flexDirection:'column', backgroundColor:'white', borderRadius:2,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
   <Box sx={{display:'flex', flexDirection:'row', marginLeft:10, marginTop:2, width:190}}>
   <YouTubeIcon />
   <Typography sx={{fontSize:18, marginLeft:1}}> YouTube</Typography>
@@ -266,7 +266,7 @@ function Socialmediapage() {
       </Box>
     </Box>
   <Box sx={{display:'flex', justifyContent:'center', marginTop:10}}>
-   <Button variant="contained" sx={{color:'black',fontSize:20, width:100, border:'solid', backgroundColor:'#eed9c4',borderRadius:20,transition:'none','&:hover':{backgroundColor:'white'}}}>
+   <Button variant="contained" sx={{color:'black',fontSize:20, width:100, border:'solid', backgroundColor:'#eed9c4',borderRadius:5,transition:'none','&:hover':{backgroundColor:'white'}}}>
     <Link to="/Postpopup" style={{ textDecoration: 'none', color: 'inherit'}}>Post</Link>
     </Button>
     </Box>  

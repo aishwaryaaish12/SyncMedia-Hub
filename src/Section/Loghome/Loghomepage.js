@@ -25,8 +25,8 @@ function Loghomepage(){
      of your organization 
     </Typography>
     <Box sx={{display: 'flex', flexDirection: 'row', marginLeft:25, gap:5, marginTop:8}}>
-      <Box sx={{backgroundColor:'#2E1114', width:330, borderRadius:2}}>
-        <Box component="img"sx={{ width: 150, height:150,marginLeft:1, marginRight:1, marginTop:2}}
+      <Box sx={{backgroundColor:'#2E1114', width:330, borderRadius:2,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
+        <Box component="img"sx={{ width: 135, height:150,marginLeft:1, marginRight:1, marginTop:2}}
         src="/Assets/undraw_Events_re_98ue.png"alt="">
         </Box>
         <Typography sx={{color:'white', marginLeft:6, paddingRight:1, marginBottom:3}}>
@@ -35,15 +35,15 @@ function Loghomepage(){
           </Link>
           </Typography>
       </Box>
-      <Box sx={{backgroundColor:'#2E1114', width:330, borderRadius:2}}>
-        <Box component="img"sx={{ width: 150, height:140, marginTop:2,  paddingRight:1}}
+      <Box sx={{backgroundColor:'#2E1114', width:330, borderRadius:2,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
+        <Box component="img"sx={{ width: 150, height:140, marginTop:2,  paddingRight:1,}}
         src="/Assets/undraw_Account_re_o7id (1).png"alt="">
         </Box>
         <Typography sx={{color:'white', marginLeft:5, marginTop:1}}>
          <Link to="/Analytics" style={{ textDecoration: 'none', color: 'inherit' }}>Accounts</Link>
         </Typography>
       </Box>
-      <Box sx={{backgroundColor:'#2E1114', width:330, borderRadius:2}}>
+      <Box sx={{backgroundColor:'#2E1114', width:330, borderRadius:2,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
         <Box component="img"sx={{ width:150, height:140, marginTop:2}}
         src="/Assets/undraw_Publish_post_re_wmql.png"alt="">
         </Box>
