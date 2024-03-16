@@ -22,16 +22,16 @@ function Verifyemailform() {
         Enter the verification code
       </Typography>
       <Box sx={{display:'flex', flexDirection:'row',gap:3, marginLeft:1, marginBottom:3}}>
-      <FormControl fullWidth variant="outlined" sx={{width: 55}}>
+      <FormControl fullWidth variant="outlined" sx={{width: 55,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}}>
           <OutlinedInput  sx={{fontSize:14, textAlign:'center', padding:1}} inputProps={{ maxLength: 1 }}/>
       </FormControl>
-      <FormControl fullWidth variant="outlined" sx={{width: 55}}>
+      <FormControl fullWidth variant="outlined" sx={{width: 55,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}}>
           <OutlinedInput  sx={{fontSize:14, textAlign:'center', padding:1}} inputProps={{ maxLength: 1 }} />
       </FormControl>
-      <FormControl fullWidth variant="outlined" sx={{width: 55}}>
+      <FormControl fullWidth variant="outlined" sx={{width: 55,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}}>
           <OutlinedInput  sx={{fontSize:14, textAlign:'center', padding:1}} inputProps={{ maxLength: 1 }}/>
       </FormControl>
-      <FormControl fullWidth variant="outlined" sx={{width: 55}}>
+      <FormControl fullWidth variant="outlined" sx={{width: 55,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}}>
           <OutlinedInput  sx={{fontSize:14, textAlign:'center', padding:1}} inputProps={{ maxLength: 1 }}/>
       </FormControl>
       </Box>

@@ -14,7 +14,7 @@ function EmailcampaignPopupForm(){
       <Typography variant="h6" sx={{ marginTop: 4, fontSize: 18 , color:'black'}}>
          Email Campaign Successfully Executed !!!
       </Typography>
-      <Button variant="text" sx={{color:'black', marginTop:5, width:200, marginLeft:25, color:'black'}}>
+      <Button variant="text" sx={{color:'black', marginTop:5, width:70, marginLeft:25, color:'black',backgroundColor:'#eed9c4'}}>
         <Link to="/EmailCampaign" style={{ textDecoration: 'none', color: 'inherit',fontSize:20}}>OK</Link>
       </Button>
     </Box>

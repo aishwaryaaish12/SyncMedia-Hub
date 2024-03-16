@@ -31,8 +31,11 @@ function LoginForm() {
           <Typography variant="h6" sx={{ marginBottom: 4,marginLeft: 18, fontWeight: 'bold',fontSize: 20,color:'black' }}>
             Login
           </Typography>
-          <TextField label="Email ID" fullWidth variant="outlined" sx={{ marginBottom: 6 , width: 350}} InputProps={{ startAdornment: (<InputAdornment position='start'><EmailIcon color='action' /> </InputAdornment>) }} />
-          <TextField label="Password"  type={showPassword ? 'text' : 'password'} fullWidth variant="outlined" sx={{ marginBottom: 3, width: 350}} InputProps={{ startAdornment: (<InputAdornment position='start'><LockIcon color='action' /> </InputAdornment>), endAdornment: (<InputAdornment position='end'> <IconButton onClick={togglePasswordVisibility} edge='end'> {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}</IconButton></InputAdornment>),}} />
+          <TextField label="Email ID" fullWidth variant="outlined" sx={{ marginBottom: 6 , width: 350, '& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}} 
+           InputProps={{ startAdornment: (<InputAdornment position='start'><EmailIcon color='action' /> </InputAdornment>) }} InputLabelProps={{ 
+            sx: { color: 'black','&.Mui-focused':{color:'black'} } }} />
+          <TextField label="Password"  type={showPassword ? 'text' : 'password'} fullWidth variant="outlined" sx={{ marginBottom: 3, width: 350,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}} InputProps={{ startAdornment: (<InputAdornment position='start'><LockIcon color='action' /> </InputAdornment>), endAdornment: (<InputAdornment position='end'> <IconButton onClick={togglePasswordVisibility} edge='end'> {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}</IconButton></InputAdornment>),}} InputLabelProps={{ 
+            sx: { color: 'black','&.Mui-focused':{color:'black'} } }}/>
           <Typography variant="h6" sx={{ marginBottom: 2, marginLeft: 13, fontSize: 16, fontWeight: 'bold', cursor: 'pointer' }}>
             <Link to="/ForgotPassword" style={{ textDecoration: 'none', color: 'inherit',color:'black'  }}>
             Forgot password?

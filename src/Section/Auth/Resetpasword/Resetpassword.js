@@ -18,10 +18,10 @@ function Resetpasswordform(){
       <Typography variant="h6" sx={{ marginBottom: 2,marginTop: 4, fontWeight: 'bold',fontSize: 24 ,marginLeft:5,color:'black' }}>
         RESET PASSWORD
       </Typography>
-      <FormControl fullWidth variant="outlined" sx={{ marginBottom: 5 , width: 300}}>
+      <FormControl fullWidth variant="outlined" sx={{ marginBottom: 5 , width: 300,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}}>
           <OutlinedInput placeholder="Enter new password" sx={{fontSize:14, textAlign:'center'}} />
       </FormControl>
-      <FormControl fullWidth variant="outlined" sx={{ marginBottom: 5 , width: 300}}>
+      <FormControl fullWidth variant="outlined" sx={{ marginBottom: 5 , width: 300,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }},}}>
           <OutlinedInput placeholder="Confirm the password" sx={{fontSize:14, textAlign:'center'}} />
       </FormControl>
       <Button variant="contained" color="primary" fullWidth sx={{ color: 'black', width: 200,borderRadius: 20, height: 40, marginBottom: 2, marginLeft: 7, fontSize: 14 ,backgroundColor:'#eed9c4', transition: 'none', '&:hover': {backgroundColor: 'White'},}}>

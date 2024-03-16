@@ -87,7 +87,7 @@ function LogNavbar(props) {
                         </MenuItem>
                         <MenuItem
                           component={Link}
-                          to="/campaign/option2"
+                          to="/Whatsappcampaign"
                           onClick={handleCampaignMenuClose}
                         >
                           Whatsapp

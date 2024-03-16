@@ -28,9 +28,16 @@ import CreateEmailCampaign from './pages/CreateEmailCampaign/CreateEmailCampaign
 import Postpopup from './pages/Postpopup/Postpopup';
 import Account from './pages/Account/Account';
 import Update from './pages/Update/Update';
+import Whatsappcampaign from './pages/Whatsappcampaign/Whatsappcampaign';
+import Createwhatsappcampaign from './pages/Createwhatsappcampaign/Createwhatsappcampaign';
+import Draft from './pages/Draft/Draft';
+import Contentcalendar from './pages/Contentcalendar/Contentcalendar';
 import EmailcampaignTemplate from './pages/EmailcampaignTemplate/EmailcampaignTemplate';
 import EmailcampaignPopup from './pages/EmailcampaignPopup/EmailcampaignPopup';
 import AllCampaigns from './pages/AllCampaigns/AllCampaigns';
+import WhatsappCampainTemplate from './pages/WhatsappCampaignTemplate/WhatsappCampaignTemplate';
+import WhatsapPopup from './pages/WhatsapPopup/WhatsapPopup';
+import Whatsappallcampaign from './pages/Whatsappallcampaign/Whatsappallcampaign';
 
 
 
@@ -132,14 +139,6 @@ const router = createBrowserRouter([
 
 
   {
-    path: "/ContentLibrary1",
-    element:<ContentLibrary1/>,
-  },
-  {
-    path: "/ContentLibrary2",
-    element:<ContentLibrary2/>,
-  },
-  {
     path: "/Socialmedia",
     element:<Socialmedia/>,
   },
@@ -156,6 +155,22 @@ const router = createBrowserRouter([
     element:<Update/>,
   },
   {
+    path: "/Whatsappcampaign",
+    element:<Whatsappcampaign/>,
+  },
+  {
+    path: "/Createwhatsappcampaign",
+    element:<Createwhatsappcampaign/>,
+  },
+  {
+    path: "/Draft",
+    element:<Draft/>,
+  },
+  {
+    path: "/Contentcalendar",
+    element:<Contentcalendar/>,
+  },
+  {
     path: "/EmailcampaignTemplate",
     element:<EmailcampaignTemplate/>,
   },
@@ -167,6 +182,19 @@ const router = createBrowserRouter([
     path: "/AllCampaigns",
     element:<AllCampaigns/>,
   },
+  {
+    path: "/WhatsappCampaignTemplate",
+    element:<WhatsappCampainTemplate/>,
+  },
+  {
+    path: "/WhatsapPopup",
+    element:<WhatsapPopup/>,
+  },
+  {
+    path: "/Whatsappallcampaign",
+    element:<Whatsappallcampaign/>,
+  },
+
 
 ]);
 
@@ -194,9 +222,20 @@ function App() {
         <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
         <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
         <Route path='/ContentLibrary2' element={<ContentLibrary2/>}/>
+        <Route path='/Socialmedia' element={<Socialmedia/>}/>
+        <Route path='/Analytics' element={<Analytics/>}/>
+        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
+        <Route path='/Analytics' element={<Analytics/>}/>
+        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
+        <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
+        <Route path='/ContentLibrary2' element={<ContentLibrary2/>}/>
         <Route path='/Postpopup' element={<Postpopup/>}/>
         <Route path='/Account' element={<Account/>}/>
         <Route path='/Update' element={<Update/>}/>
+        <Route path='/Whatsappcampaign' element={<Whatsappcampaign/>}/>
+        <Route path='/Createwhatsappcampaign' element={<Createwhatsappcampaign/>}/>
+        <Route path='/Draft' element={<Draft/>}/>
+        <Route path='/Contentcalendar' element={<Contentcalendar/>}/>
         <Route path='/Socialmedia' element={<Socialmedia/>}/>
         <Route path='/Analytics' element={<Analytics/>}/>
         <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
@@ -204,6 +243,12 @@ function App() {
         <Route path='/EmailcampaignTemplate' element={<EmailcampaignTemplate/>}/>
         <Route path='/EmailcampaignPopup' element={<EmailcampaignPopup/>}/>
         <Route path='/AllCampaigns' element={<AllCampaigns/>}/>
+        <Route path='/WhatsappCampaignTemplate' element={<WhatsappCampainTemplate/>}/>
+        <Route path='/WhatsapPopup' element={<WhatsapPopup/>}/>
+        <Route path='/Whatsappallcampaign' element={<Whatsappallcampaign/>}/>
+
+
+
 
 
 

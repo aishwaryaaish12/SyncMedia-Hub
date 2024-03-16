@@ -16,20 +16,27 @@ import Loghome from '../Loghome/Loghome'
 import Contact from '../Contact/Contact'
 import ContentLibrary from '../ContentLibrary/ContentLibrary'
 import Business from '../Auth/Business/Business'
-import ContentLibrary1 from '../ContentLibrary1/ContentLibrary1'
-import ContentLibrary2 from '../ContentLibrary2/ContentLibrary2'
-import Socialmedia from '../Socialmedia/Socialmedia'
 
 import Analytics from '../Analytics/Analytics'
 import Facebookconnect from '../Auth/Facebookconnect/Facebookconnect'
 import EmailCampaign from '../EmailCampaign/EmailCampaign'
 import CreateEmailCampaign from '../CreateEmailCampaign/CreateEmailCampaign'
+import ContentLibrary1 from '../ContentLibrary1/ContentLibrary1'
+import ContentLibrary2 from '../ContentLibrary2/ContentLibrary2'
+import Socialmedia from '../Socialmedia/Socialmedia'
 import Postpopup from '../Postpopup/Postpopup'
 import Account from '../Account/Account'
 import Update from '../Update/Update'
+import Whatsappcampaign from '../Whatsappcampaign/Whatsappcampaign'
+import Createwhatsappcampaign from '../Createwhatsappcampaign/Createwhatsappcampaign'
+import Draft from '../Draft/Draft'
+import Contentcalendar from '../Contentcalendar/Contentcalendar'
 import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
 import EmailcampaignPopup from '../EmailcampaignPopup/EmailcampaignPopup'
 import AllCampaigns from '../AllCampaigns/AllCampaigns'
+import WhatsappCampainTemplate from '../WhatsappCampaignTemplate/WhatsappCampaignTemplate'
+import WhatsapPopup from '../WhatsapPopup/WhatsapPopup'
+import Whatsappallcampaign from '../Whatsappallcampaign/Whatsappallcampaign'
 
 
 function Home() {
@@ -65,9 +72,16 @@ function Home() {
         <Postpopup/>
         <Account/>
         <Update/>
+        <Whatsappcampaign/>
+        <Createwhatsappcampaign/>
+        <Draft/>
+        <Contentcalendar/>
         <EmailcampaignTemplate />
         <EmailcampaignPopup />
         <AllCampaigns />
+        <WhatsappCampainTemplate />
+        <WhatsapPopup />
+        <Whatsappallcampaign />
     </Box> 
   )
 }

@@ -44,24 +44,24 @@ function ContentLibrary2form () {
           rows={4}
           value={blogContent}
           onChange={handleBlogContentChange}
-          sx={{ marginBottom: 3, width: 600, backgroundColor: 'white', borderRadius: 1 , textAlign:'center'}}
+          sx={{ marginBottom: 3, width: 600, backgroundColor: 'white', borderRadius: 1 , textAlign:'center','& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }}}}
         />
     </Box> 
 
 
     <Box sx={{display:'flex', flexDirection:'row', justifyContent:'center', gap:5}}>
      <Box sx={{marginTop: 3}}>
-     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black'}}>
+     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black','&:hover': {borderColor: 'black',  },'&:active': {borderColor: 'black', }}}>
       <Link to="/ContentLibrary" style={{ textDecoration: 'none', color: 'inherit',color:'black'  }}>image</Link>
      </Button>
      </Box>
      <Box sx={{marginTop: 3}}>
-     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black'}}>
+     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black','&:hover': {borderColor: 'black',  },'&:active': {borderColor: 'black', }}}>
      <Link to="/ContentLibrary1" style={{ textDecoration: 'none', color: 'inherit',color:'black'  }}>video</Link>
      </Button>
      </Box>
      <Box sx={{marginTop: 3}}>
-     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black', fontWeight:'bold'}}>
+     <Button variant="outlined" sx={{color:'black', borderColor:'gray', color:'black', fontWeight:'bold','&:hover': {borderColor: 'black',  },'&:active': {borderColor: 'black', }}}>
      <Link to="/ContentLibrary2" style={{ textDecoration: 'none', color: 'inherit',color:'black', fontWeight:'bold'}}>blog</Link>
      </Button>
      </Box>
@@ -75,12 +75,16 @@ function ContentLibrary2form () {
     rows={4}
     value={descriptionContent}
     onChange={handleDescriptionChange}
-    sx={{ marginBottom: 3, width: 600, backgroundColor: 'white', borderRadius: 1, textAlign: 'center' }}
+    sx={{ marginBottom: 3, width: 600, backgroundColor: 'white', borderRadius: 1, textAlign: 'center' ,'& .MuiOutlinedInput-root': { '& fieldset': {  borderColor: 'black',}, '&:hover fieldset': {borderColor: 'black', },'&.Mui-focused fieldset': {borderColor: 'black', }}}}
   />
     </Box>
 
     <Box sx={{display:'flex', flexDirection:'row', gap:3, marginLeft:25}}>
-    <Button variant="contained" sx={{color:'white', backgroundColor:'#2E1114','&:hover': {backgroundColor: '#2E1114',}}}>Draft</Button>
+    <Button variant="contained" sx={{color:'white', backgroundColor:'#2E1114','&:hover': {backgroundColor: '#2E1114',}}}>
+      <Link to= "/Draft" style={{ textDecoration: 'none', color: 'inherit'}}>
+      Draft
+      </Link>
+    </Button>
     <Button variant="contained" sx={{color:'white', backgroundColor:'#2E1114','&:hover': {backgroundColor: '#2E1114',}}}>
     <Link to= "/Socialmedia" style={{ textDecoration: 'none', color: 'inherit'}}>
       Upload
