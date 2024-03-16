@@ -1,8 +1,7 @@
 import React from 'react'
-import Contentcalendarpage from '../../Section/Contentcalendar/Contentcalendarpage'
 import { Box, Stack } from '@mui/material';
-
-function Contentcalendar() {
+import Contentcalendarpage from '../../Section/Contentcalendar/Contentcalendarpage';
+function Contentcalendar(){
   return (
     <Stack
         direction="row"

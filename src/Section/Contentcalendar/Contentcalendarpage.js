@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 
 const localizer = momentLocalizer(moment);
 
-function ContentCalendarPage() {
+function Contentcalendarpage() {
   const [events, setEvents] = useState([]);
   const [date, setDate] = useState(new Date());
 
@@ -95,4 +95,4 @@ function ContentCalendarPage() {
   );
 }
 
-export default ContentCalendarPage;
+export default Contentcalendarpage;

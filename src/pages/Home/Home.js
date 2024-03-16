@@ -27,9 +27,19 @@ import Socialmedia from '../Socialmedia/Socialmedia'
 import Postpopup from '../Postpopup/Postpopup'
 import Account from '../Account/Account'
 import Update from '../Update/Update'
+import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
+import EmailcampaignPopup from '../EmailcampaignPopup/EmailcampaignPopup'
+import AllCampaigns from '../AllCampaigns/AllCampaigns'
+import ContentLibrary1 from '../ContentLibrary1/ContentLibrary1'
+import ContentLibrary2 from '../ContentLibrary2/ContentLibrary2'
+import Socialmedia from '../Socialmedia/Socialmedia'
+import Postpopup from '../Postpopup/Postpopup'
+import Account from '../Account/Account'
+import Update from '../Update/Update'
 import Whatsappcampaign from '../Whatsappcampaign/Whatsappcampaign'
 import Createwhatsappcampaign from '../Createwhatsappcampaign/Createwhatsappcampaign'
 import Draft from '../Draft/Draft'
+import Schedule from '../Schedule/Schedule'
 import Contentcalendar from '../Contentcalendar/Contentcalendar'
 import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
 import EmailcampaignPopup from '../EmailcampaignPopup/EmailcampaignPopup'
@@ -66,15 +76,16 @@ function Home() {
         <Facebookconnect />
         <EmailCampaign />
         <CreateEmailCampaign />
-        <ContentLibrary1/>
-        <ContentLibrary2/>
-        <Socialmedia/>
         <Postpopup/>
         <Account/>
         <Update/>
+        <EmailcampaignTemplate />
+        <EmailcampaignPopup />
+        <AllCampaigns />
         <Whatsappcampaign/>
         <Createwhatsappcampaign/>
         <Draft/>
+        <Schedule/>
         <Contentcalendar/>
         <EmailcampaignTemplate />
         <EmailcampaignPopup />

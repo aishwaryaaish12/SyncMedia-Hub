@@ -25,7 +25,7 @@ function Draftpage () {
 
         <Box sx={{display:'flex', flexDirection:'row', backgroundColor:'white',width:1250, height:650,}}>
 
-          <Box sx={{backgroundColor:'#eed9c4', marginLeft:5, marginTop:5, marginBottom:5, width:250, borderStyle:'dotted'}}>
+          <Box sx={{backgroundColor:'#eed9c4', marginLeft:5, marginTop:5, marginBottom:5, width:250, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)'}}>
           
             <FormControl sx={{marginTop:5, marginLeft:4}}>
             <Typography variant='h6' sx={{fontWeight:'bold', marginLeft:5}}>DRAFT</Typography>
@@ -40,7 +40,7 @@ function Draftpage () {
             </FormControl>
           
           </Box>  
-          <Box sx={{backgroundColor:'#eed9c4', marginLeft:1, marginTop:5, marginBottom:5, width:900, borderStyle:'dotted'}}>
+          <Box sx={{backgroundColor:'#eed9c4', marginLeft:2, marginTop:5, marginBottom:5, width:900, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.3)'}}>
           {draft ? (
               // Show the draft content
               <Typography variant="body1">{draft}</Typography>
