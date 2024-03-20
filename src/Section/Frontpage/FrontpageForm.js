@@ -2,10 +2,12 @@ import React from 'react'
 import { Box, Button, Typography} from '@mui/material';
 import { Link } from 'react-router-dom';
 
-function FrontPageForm() {
+function FrontpageForm() {
+  
   return (
-    <Box sx={{ display: 'flex',justifyContent:'space-around',gap: '3', backgroundColor: '#eed9c4'}}>
-    <Box sx={{ width: '500%', maxWidth: 500,display:'flex',flexDirection:'column',marginLeft:-10 }}>
+
+   <Box sx={{ display: 'flex',justifyContent:{xs:'center', md:'space-around'},gap: '3', backgroundColor: '#eed9c4'}}>
+   <Box sx={{ width: '500%', maxWidth: 500,display:'flex',flexDirection:'column',marginLeft:-10 }}>
     <Typography variant="h1" sx={{marginLeft:7,marginTop:5}}>
       Dive into a world of influence-
     </Typography>
@@ -23,9 +25,10 @@ function FrontPageForm() {
         </Box>
 
     </Box>
+   
 
   )
 
 }
 
-export default FrontPageForm
+export default FrontpageForm

@@ -1,22 +1,20 @@
 import React from 'react'
 import { Box, Stack } from '@mui/material';
-import Loghomepage from '../../Section/Loghome/Loghomepage'
-import LogNavbar from '../../Component/LogNavbar/LogNavbar'
+import AdminhomeForm from '../../Section/Adminhome/AdminhomeForm'
 
-function Loghome(){
+function Adminhome() {
   return (
     <Stack
   direction="row"
   justifyContent="center"
   alignItems="center"
-  spacing={0}
+  spacing={2}
   sx={{height:"100vh", backgroundColor: '#eed9c4'}}
 >
-      <LogNavbar/>
-      <Loghomepage />
+
+      < AdminhomeForm/>
     </Stack>
   )
 }
 
-export default Loghome
-
+export default Adminhome

@@ -21,6 +21,9 @@ import Analytics from '../Analytics/Analytics'
 import Facebookconnect from '../Auth/Facebookconnect/Facebookconnect'
 import EmailCampaign from '../EmailCampaign/EmailCampaign'
 import CreateEmailCampaign from '../CreateEmailCampaign/CreateEmailCampaign'
+import Postpopup from '../Postpopup/Postpopup'
+import Account from '../Account/Account'
+import Update from '../Update/Update'
 import ContentLibrary1 from '../ContentLibrary1/ContentLibrary1'
 import ContentLibrary2 from '../ContentLibrary2/ContentLibrary2'
 import Socialmedia from '../Socialmedia/Socialmedia'
@@ -39,6 +42,7 @@ import Update from '../Update/Update'
 import Whatsappcampaign from '../Whatsappcampaign/Whatsappcampaign'
 import Createwhatsappcampaign from '../Createwhatsappcampaign/Createwhatsappcampaign'
 import Draft from '../Draft/Draft'
+import Contentcalendar from '../Contentcalendar/Contentcalendar.js'
 import Schedule from '../Schedule/Schedule'
 import Contentcalendar from '../Contentcalendar/Contentcalendar'
 import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
@@ -47,6 +51,16 @@ import AllCampaigns from '../AllCampaigns/AllCampaigns'
 import WhatsappCampainTemplate from '../WhatsappCampaignTemplate/WhatsappCampaignTemplate'
 import WhatsapPopup from '../WhatsapPopup/WhatsapPopup'
 import Whatsappallcampaign from '../Whatsappallcampaign/Whatsappallcampaign'
+import Schedule from '../Schedule/Schedule'
+import Adminhome from '../Adminhome/Adminhome.js'
+import TotalUsers from '../Adminhome/TotalUsers.js'
+import ActiveUsers from '../Adminhome/ActiveUsers.js'
+import InactiveUsers from '../Adminhome/InactiveUsers.js'
+import BlockedUsers from '../Adminhome/BlockedUsers.js'
+import  Feedback  from '../Adminhome/Feedback.js'
+import SubscribedUsers from '../Adminhome/SubscribedUsers.js'
+import  Dashboard  from '../Adminhome/Dashboard.js'
+
 
 
 function Home() {
@@ -85,6 +99,9 @@ function Home() {
         <Whatsappcampaign/>
         <Createwhatsappcampaign/>
         <Draft/>
+        <Whatsappcampaign/>
+        <Createwhatsappcampaign/>
+        <Draft/>
         <Schedule/>
         <Contentcalendar/>
         <EmailcampaignTemplate />
@@ -93,6 +110,15 @@ function Home() {
         <WhatsappCampainTemplate />
         <WhatsapPopup />
         <Whatsappallcampaign />
+        <Schedule/>
+        <Adminhome />
+        <TotalUsers />
+        <ActiveUsers />
+        <InactiveUsers />
+        <BlockedUsers />
+        <Feedback />
+        <SubscribedUsers />
+        <Dashboard />
     </Box> 
   )
 }
