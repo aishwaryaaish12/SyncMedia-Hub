@@ -20,22 +20,22 @@ import Analytics from '../Analytics/Analytics'
 import Facebookconnect from '../Auth/Facebookconnect/Facebookconnect'
 import EmailCampaign from '../EmailCampaign/EmailCampaign'
 import CreateEmailCampaign from '../CreateEmailCampaign/CreateEmailCampaign'
-import Postpopup from '../Postpopup/Postpopup'
 import Account from '../Account/Account'
 import Update from '../Update/Update'
+import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
+import EmailcampaignPopup from '../EmailcampaignPopup/EmailcampaignPopup'
+import AllCampaigns from '../AllCampaigns/AllCampaigns'
 import ContentLibrary1 from '../ContentLibrary1/ContentLibrary1'
 import ContentLibrary2 from '../ContentLibrary2/ContentLibrary2'
 import Socialmedia from '../Socialmedia/Socialmedia'
 import Postpopup from '../Postpopup/Postpopup'
 import Account from '../Account/Account'
 import Update from '../Update/Update'
-import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
-import EmailcampaignPopup from '../EmailcampaignPopup/EmailcampaignPopup'
-import AllCampaigns from '../AllCampaigns/AllCampaigns'
 import Whatsappcampaign from '../Whatsappcampaign/Whatsappcampaign'
 import Createwhatsappcampaign from '../Createwhatsappcampaign/Createwhatsappcampaign'
 import Draft from '../Draft/Draft'
-import Contentcalendar from '../Contentcalendar/Contentcalendar.js'
+import Schedule from '../Schedule/Schedule'
+import Contentcalendar from '../Contentcalendar/Contentcalendar'
 import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
 import EmailcampaignPopup from '../EmailcampaignPopup/EmailcampaignPopup'
 import AllCampaigns from '../AllCampaigns/AllCampaigns'
@@ -43,6 +43,8 @@ import WhatsappCampainTemplate from '../WhatsappCampaignTemplate/WhatsappCampaig
 import WhatsapPopup from '../WhatsapPopup/WhatsapPopup'
 import Whatsappallcampaign from '../Whatsappallcampaign/Whatsappallcampaign'
 import Schedule from '../Schedule/Schedule'
+import Subscription from '../Subscription/Subscription'
+import TrailEnded from '../TrailEnded/TrailEnded'
 
 
 function Home() {
@@ -81,6 +83,10 @@ function Home() {
         <Whatsappcampaign/>
         <Createwhatsappcampaign/>
         <Draft/>
+        <Schedule/>
+        <Whatsappcampaign/>
+        <Createwhatsappcampaign/>
+        <Draft/>
         <Contentcalendar/>
         <EmailcampaignTemplate />
         <EmailcampaignPopup />
@@ -89,6 +95,8 @@ function Home() {
         <WhatsapPopup />
         <Whatsappallcampaign />
         <Schedule/>
+        <Subscription/>
+        <TrailEnded/>
     </Box> 
   )
 }

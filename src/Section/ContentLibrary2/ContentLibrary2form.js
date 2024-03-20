@@ -34,7 +34,7 @@ function ContentLibrary2form () {
         />
 <Box>
     <Box >
-      <Typography variant='h4' sx={{marginLeft:17, color:'black'}}>CONTANT LIBRARY</Typography>
+      <Typography variant='h4' sx={{marginLeft:17, color:'black'}}>CONTENT LIBRARY</Typography>
     </Box>  
     <Box sx={{display:'flex', flexDirection:'column', borderRadius:2, gap:3, marginTop:5, alignItems:'center'}}>
     <TextField

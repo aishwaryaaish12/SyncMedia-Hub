@@ -8,8 +8,8 @@ function WhatsappCampaignTemplateForm(){
   return (
     <Box>
           <Box component='img'
-    src='/Assets/Whatsappcampaign.png'
-    sx={{ width: 1800, height: 750,position:'fixed',marginTop:-48,marginLeft:-105,backgroundColor: 'rgba(0, 0, 0, 0.5)',opacity:0.5
+    src='/Assets/Campaign.png'
+    sx={{ width: 1000, height: 750,position:'fixed',marginTop:-48,marginLeft:-105,backgroundColor: 'rgba(0, 0, 0, 0.5)',opacity:0.5
   }}/>
           <Box
         sx={{
@@ -26,26 +26,20 @@ function WhatsappCampaignTemplateForm(){
         <Box>
           <Typography variant='h4' sx={{textAlign:'center',marginTop:5}}>TEMPLATE</Typography>
         </Box>
-        <Box sx={{ display: 'grid', gridTemplateRows: '1.5fr 1fr 2fr 1fr', gap: '0px', height: 450, marginLeft: 25,width:600,marginTop:4 }}>
-          {/* First Row */}
-          <Box sx={{  textAlign: 'center',backgroundColor:'#f2ebe4' }}>
-            <Typography sx={{marginTop:5,fontSize:25}}>Image</Typography>
+        <Box sx={{display:'flex',flexDirection:'column',width:400,height:450,marginLeft:35,marginTop:5,backgroundColor:'#4f2c09',borderRadius:2}}>
+          <Box>
+            <Typography sx={{color:'white',fontSize:25,marginTop:2,textAlign:'center'}}>Subject</Typography>
           </Box>
-          {/* Second Row */}
-          <Box sx={{  textAlign: 'center',backgroundColor:'#ebded1' }}>
-          <Typography sx={{marginTop:3,fontSize:25}}>Subject</Typography>
+          <Box component='img'
+          src='/Assets/securelogin.png' sx={{width:400,height:200}}/>
+          <Box>
+            <Typography sx={{color:'white',textAlign:'center',marginTop:3}}> Description</Typography>
           </Box>
-          {/* Third Row */}
-          <Box sx={{  textAlign: 'center',backgroundColor:'#e8ccb0' }}>
-          <Typography sx={{marginTop:7,fontSize:25}}>Description</Typography>
-          </Box>
-          {/* Fourth Row */}
-          <Box sx={{ textAlign: 'center',backgroundColor:'#e8c199' }}>
-          <Typography sx={{marginTop:3,fontSize:25}}>Link</Typography>
-          </Box>
+          <Button variant="contained" sx={{backgroundColor:'white',color:'#4f2c09',width:150,height:50,marginTop:5,marginLeft:17,'&:hover': {backgroundColor: 'White'}}}>Link</Button>
+
         </Box>
         <Button variant="contained" sx={{fontSize:25,marginTop:4,marginLeft:55,width:150,'&:hover': {backgroundColor: 'White'},backgroundColor:'#eed9c4',color:'black'}}>
-          <Link to='/WhatsapPopup'style={{ textDecoration: 'none', color: 'inherit'}}>Send</Link></Button>
+          <Link to='/EmailcampaignPopup'style={{ textDecoration: 'none', color: 'inherit'}}>Send</Link></Button>
 
       </Box>
     </Box>

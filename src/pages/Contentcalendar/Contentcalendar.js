@@ -2,19 +2,18 @@ import React from 'react'
 import { Stack } from '@mui/material';
 import Contentcalendarpage from '../../Section/Contentcalendar/Contentcalendarpage';
 
-function Contentcalendar()  {
+function Contentcalendar(){
   return (
     <Stack
-    direction="row"
-    justifyContent="center"
-    alignItems="center"
-    spacing={2}
-    sx={{height:"100vh", backgroundColor: '#eed9c4'}}
-  > 
-        <Contentcalendarpage/>
-      </Stack>
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={0}
+        sx={{height:"100vh", backgroundColor: '#eed9c4', overflow:'hidden'}}
+      >
+          <Contentcalendarpage />
+          </Stack>
   )
 }
 
 export default Contentcalendar
-
