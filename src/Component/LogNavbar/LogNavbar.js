@@ -65,7 +65,7 @@ function LogNavbar(props) {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ color: 'black', flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontFamily: 'cursive' }}
+                sx={{ color: 'black', display: { xs: 'none', sm: 'block' }, fontFamily: 'cursive',marginLeft:9 }}
               >
                 SyncMedia Hub
               </Typography>
@@ -135,8 +135,8 @@ function LogNavbar(props) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
-          <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2,color: 'black',fontFamily: 'cursive' }}>
+          <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', marginLeft:'auto' }}>
+            <Typography variant="h6" sx={{color: 'black',fontFamily: 'cursive' }}>
               SyncMedia Hub
             </Typography>
             <Divider />

@@ -34,6 +34,7 @@ import Update from '../Update/Update'
 import Whatsappcampaign from '../Whatsappcampaign/Whatsappcampaign'
 import Createwhatsappcampaign from '../Createwhatsappcampaign/Createwhatsappcampaign'
 import Draft from '../Draft/Draft'
+import Contentcalendar from '../Contentcalendar/Contentcalendar.js'
 import Schedule from '../Schedule/Schedule'
 import Contentcalendar from '../Contentcalendar/Contentcalendar'
 import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
@@ -43,6 +44,14 @@ import WhatsappCampainTemplate from '../WhatsappCampaignTemplate/WhatsappCampaig
 import WhatsapPopup from '../WhatsapPopup/WhatsapPopup'
 import Whatsappallcampaign from '../Whatsappallcampaign/Whatsappallcampaign'
 import Schedule from '../Schedule/Schedule'
+import Adminhome from '../Adminhome/Adminhome.js'
+import TotalUsers from '../Adminhome/TotalUsers.js'
+import ActiveUsers from '../Adminhome/ActiveUsers.js'
+import InactiveUsers from '../Adminhome/InactiveUsers.js'
+import BlockedUsers from '../Adminhome/BlockedUsers.js'
+import Feedback  from '../Adminhome/Feedback.js'
+import SubscribedUsers from '../Adminhome/SubscribedUsers.js'
+import Dashboard  from '../Adminhome/Dashboard.js'
 import Subscription from '../Subscription/Subscription'
 import TrailEnded from '../TrailEnded/TrailEnded'
 
@@ -83,6 +92,9 @@ function Home() {
         <Whatsappcampaign/>
         <Createwhatsappcampaign/>
         <Draft/>
+        <Whatsappcampaign/>
+        <Createwhatsappcampaign/>
+        <Draft/>
         <Schedule/>
         <Whatsappcampaign/>
         <Createwhatsappcampaign/>
@@ -95,6 +107,14 @@ function Home() {
         <WhatsapPopup />
         <Whatsappallcampaign />
         <Schedule/>
+        <Adminhome />
+        <TotalUsers />
+        <ActiveUsers />
+        <InactiveUsers />
+        <BlockedUsers />
+        <Feedback />
+        <SubscribedUsers />
+        <Dashboard />
         <Subscription/>
         <TrailEnded/>
     </Box> 

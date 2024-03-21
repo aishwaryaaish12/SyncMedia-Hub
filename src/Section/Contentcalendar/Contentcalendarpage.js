@@ -1,96 +1,128 @@
-import React, { useState } from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
-import moment from 'moment';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-
-const localizer = momentLocalizer(moment);
+import React, { useState, useEffect } from 'react';
+import { Box, Typography, IconButton } from '@mui/material';
+import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
 function Contentcalendarpage() {
-  const [events, setEvents] = useState([]);
-  const [date, setDate] = useState(new Date());
+  // JavaScript calendar logic
+  function createCalendar(month, year) {
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-  const prevMonth = () => {
-    const newDate = new Date(date);
-    newDate.setMonth(newDate.getMonth() - 1);
-    setDate(newDate);
+    const startDate = new Date(year, month, 1);
+    const endDate = new Date(year, month + 1, 0);
+
+    const daysInMonth = endDate.getDate();
+    const startDay = startDate.getDay();
+
+    // let html = '<h3>' + monthNames[month] + ' ' + year + '</h3>';
+    let html = '<table>';
+    html += '<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>';
+
+    let day = 1;
+
+    for (let i = 0; i < 6; i++) {
+      html += '<tr>';
+      for (let j = 0; j < 7; j++) {
+        if (i === 0 && j < startDay) {
+          html += '<td></td>';
+        } else if (day > daysInMonth) {
+          break;
+        } else {
+          let classToday = '';
+          const today = new Date();
+          if (year === today.getFullYear() && month === today.getMonth() && day === today.getDate()) {
+            classToday = ' class="today"';
+          }
+          html += '<td' + classToday + '>' + day + '</td>';
+          day++;
+        }
+      }
+      html += '</tr>';
+      if (day > daysInMonth) {
+        break;
+      }
+    }
+
+    html += '</table>';
+
+    return html;
+  }
+
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [calendarHeight, setCalendarHeight] = useState(0);
+
+  useEffect(() => {
+    // Update calendar height after component mounts or when currentDate changes
+    updateCalendarHeight();
+  }, [currentDate]);
+  const updateCalendarHeight = () => {
+    // Calculate and set the height of the calendar container
+    const calendarContainer = document.getElementById('calendar-container');
+    if (calendarContainer) {
+      setCalendarHeight(calendarContainer.scrollHeight);
+    }
   };
 
-  const nextMonth = () => {
-    const newDate = new Date(date);
-    newDate.setMonth(newDate.getMonth() + 1);
-    setDate(newDate);
+
+  const handlePrevMonth = () => {
+    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+  };
+
+  const handleNextMonth = () => {
+    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
   };
 
   return (
-    <Box
-      sx={{
-        position: 'relative',
-        width: '100%',
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Box
-        component='img'
-        src='/Assets/calendar.png'
-        sx={{
-          position: 'fixed',
-          width: 1800,
-          height: 750,
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          opacity: 0.5,
-        }}
-      />
-      <Box
-        sx={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          backgroundColor: 'white', // Set your box background color
-          width: 1000, // Set your desired width
-          height: 650, // Set your desired height
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '20px', // Add padding for better spacing
-        }}
-      >
-        <Typography variant='h4' sx={{ textAlign: 'center', marginTop: 5 ,marginBottom:5}}>
-          Content Calendar
-        </Typography>
-        <Box sx={{ margin: '0 auto', width: '100%', height: '90%' }}>
-          <Box
-            display='flex'
-            justifyContent='space-between'
-            alignItems='center'
-            marginBottom='1rem'
-          >
-            {/* <Button onClick={prevMonth}>&lt;</Button>
-             <Typography variant='h6'>
-              {date.toLocaleString('default', { month: 'long' })} {date.getFullYear()}
-            </Typography>  */}
-            {/* <Button onClick={nextMonth}>&gt;</Button> */}
-          </Box>
-
-          <Calendar
-            localizer={localizer}
-            events={events}
-            startAccessor='start'
-            endAccessor='end'
-            style={{ height: 500 }}
-          />
-        </Box>
+    <Box position="fixed" top={0} left={0} width="100%" height="100%" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bgcolor="#eed9c4" zIndex={1}>
+      <Box position="fixed" top={25} left={820}>
+      <Typography variant="h4" align="center" mb={0}>
+        Content Calendar
+      </Typography>
       </Box>
+      <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
+        <IconButton onClick={handlePrevMonth} sx={{ marginRight: '8px' }}><ChevronLeft /></IconButton>
+        <Typography variant="h5">
+          {currentDate.toLocaleString('default', { month: 'long', year: 'numeric' })}
+        </Typography>
+        <IconButton onClick={handleNextMonth} sx={{ marginLeft: '8px' }}><ChevronRight /></IconButton>
+      </Box>
+      <Box
+              id="calendar-container"
+              position="relative"
+              height={calendarHeight + 'px'}
+              display="flex"
+      
+              
+  sx={{
+    '& table': { // Target the table element inside the Box
+      fontSize: '15px', // Increase font size
+      width: '70%', // Make table width 100%
+      tableLayout: 'fixed',
+      marginLeft:35, // Fix table layout to prevent cell size from shrinking
+    },
+    '& td': { // Target table cells
+      width: '70px', // Set cell width
+      height: '70px', // Set cell height
+      textAlign: 'center', // Center text horizontally
+      verticalAlign: 'middle', // Center text vertically
+      border: '1px solid black', // Add border for clarity
+    },
+    '& th': { // Target table headers
+      width: '100px', // Set header width
+      height: '40px', // Set header height
+      textAlign: 'center', // Center text horizontally
+      verticalAlign: 'middle', // Center text vertically
+      backgroundColor: '#f0f0f0', // Set background color for headers
+      border: '1px solid black', // Add border for clarity
+    },
+    '.today': { // Target the cells with class 'today'
+      backgroundColor: '#d5d7db', // Set background color for the current date
+    },
+  }}
+>
+
+      <Box dangerouslySetInnerHTML={{ __html: createCalendar(currentDate.getMonth(), currentDate.getFullYear()) }}         sx={{ '.today': { backgroundColor: '#d5d7db' } }} // Highlight current date with CSS
+/>
+    </Box>
     </Box>
   );
 }

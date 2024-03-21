@@ -72,12 +72,12 @@ function Navbar(props) {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ color: 'black', flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontFamily: 'cursive' }}>
+                sx={{ color: 'black', ml:{md:'2px', lg:'60px'}, display: { xs: 'none', sm: 'block' }, fontFamily: 'cursive' }}>
                 SyncMedia Hub
               </Typography>
             </Box>
 
-            {matches && <Box sx={{ display: 'flex', gap: 8, paddingRight: 10 }}>
+            {matches && <Box sx={{ display: 'flex', gap: {sm:'10px', md:'20px',lg:'7rem'}, paddingRight: 5}}>
               {navItems.map((item) => (
                 <Button key={item} sx={{ color: 'black' }}>
                   {item === 'HOME' ? (
