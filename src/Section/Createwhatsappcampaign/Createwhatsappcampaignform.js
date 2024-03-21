@@ -167,7 +167,7 @@ function Createwhatsappcampaignform(){
   </Box>
 </Box>
 <Box>
-  <Typography sx={{fontSize:20,marginLeft:73,marginTop:6}}>From</Typography>
+  <Typography sx={{fontSize:20,marginLeft:73,marginTop:6}}>Sender</Typography>
    <TextField id="outlined-basic"  variant="outlined" sx={{backgroundColor:'#eed9c4',marginLeft:85,width:300,marginTop:-3,borderRadius:1,
                   '& .MuiOutlinedInput-root': {
                     '& fieldset': {
@@ -184,7 +184,7 @@ function Createwhatsappcampaignform(){
 
 </Box>
 <Box >
-  <Typography sx={{fontSize:20,marginLeft:73,marginTop:5}}>To</Typography>
+  <Typography sx={{fontSize:20,marginLeft:69,marginTop:5}}>Recepient</Typography>
   <Box
     sx={{
       backgroundColor: '#eed9c4',

@@ -22,7 +22,7 @@ import { useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
 const drawerWidth = '40%';
-const navItems = ['HOME', 'BUSINESS', 'ANALYTICS', 'CONTENT LIBRARY', 'CAMPAIGN'];
+const navItems = ['HOME', 'BUSINESS', 'SOCIAL CONNECT', 'CONTENT LIBRARY', 'CAMPAIGN'];
 
 function LogNavbar(props) {
   const { window } = props;
@@ -114,7 +114,7 @@ function LogNavbar(props) {
                   )}
                 </React.Fragment>
               ))}
-              <IconButton color="inherit" component={Link} to="/account" style={{ textDecoration: 'none', color: 'black' }}>
+              <IconButton color="inherit" component={Link} to="/EditProfile" style={{ textDecoration: 'none', color: 'black' }}>
                 <AccountCircleIcon />
               </IconButton>
             </Box>}

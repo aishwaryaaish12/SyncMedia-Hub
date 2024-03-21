@@ -20,24 +20,25 @@ import Business from './pages/Auth/Business/Business';
 import ContentLibrary1 from './pages/ContentLibrary1/ContentLibrary1';
 import ContentLibrary2 from './pages/ContentLibrary2/ContentLibrary2';
 import Socialmedia from './pages/Socialmedia/Socialmedia';
-import Analytics from './pages/Analytics/Analytics';
+import Analytics from './pages/SocialConnect/SocialConnect.js';
 import Facebookconnect from './pages/Auth/Facebookconnect/Facebookconnect';
 import EmailCampaign from './pages/EmailCampaign/EmailCampaign';
 import CreateEmailCampaign from './pages/CreateEmailCampaign/CreateEmailCampaign';
-import Postpopup from './pages/Postpopup/Postpopup';
-import Account from './pages/Account/Account';
-import Update from './pages/Update/Update';
-import Whatsappcampaign from './pages/Whatsappcampaign/Whatsappcampaign';
-import Createwhatsappcampaign from './pages/Createwhatsappcampaign/Createwhatsappcampaign';
-import Draft from './pages/Draft/Draft';
-import Contentcalendar from './pages/Contentcalendar/Contentcalendar.js';
 import EmailcampaignTemplate from './pages/EmailcampaignTemplate/EmailcampaignTemplate';
 import EmailcampaignPopup from './pages/EmailcampaignPopup/EmailcampaignPopup';
 import AllCampaigns from './pages/AllCampaigns/AllCampaigns';
-import Schedule from './pages/Schedule/Schedule';
+import Whatsappcampaign from './pages/Whatsappcampaign/Whatsappcampaign';
+import Createwhatsappcampaign from './pages/Createwhatsappcampaign/Createwhatsappcampaign';
+import Draft from './pages/Draft/Draft';
+import Contentcalendar from './pages/Contentcalendar/Contentcalendar';
+import Postpopup from './pages/Postpopup/Postpopup';
+import Update from './pages/Update/Update';
 import WhatsappCampainTemplate from './pages/WhatsappCampaignTemplate/WhatsappCampaignTemplate';
 import WhatsapPopup from './pages/WhatsapPopup/WhatsapPopup';
 import Whatsappallcampaign from './pages/Whatsappallcampaign/Whatsappallcampaign';
+import Schedule from './pages/Schedule/Schedule';
+import Subscription from './pages/Subscription/Subscription';
+import TrailEnded from './pages/TrailEnded/TrailEnded';
 import Adminhome from './pages/Adminhome/Adminhome.js';
 import TotalUsers from './pages/Adminhome/TotalUsers.js';
 import ActiveUsers from './pages/Adminhome/ActiveUsers.js';
@@ -46,6 +47,8 @@ import BlockedUsers from './pages/Adminhome/BlockedUsers.js';
 import  Feedback  from './pages/Adminhome/Feedback.js';
 import SubscribedUsers from './pages/Adminhome/SubscribedUsers.js';
 import Dashboard from './pages/Adminhome/Dashboard.js';
+import EditProfile from './pages/EditProfile/EditProfile.js';
+import SocialConnect from './pages/SocialConnect/SocialConnect.js';
 
 
 
@@ -125,8 +128,8 @@ const router = createBrowserRouter([
     element:<Business/>,
   },
   {
-    path: "/Analytics",
-    element:<Analytics/>,
+    path: "/SocialConnect",
+    element:<SocialConnect/>,
   },
   {
     path: "/Facebookconnect",
@@ -140,8 +143,6 @@ const router = createBrowserRouter([
     path: "/CreateEmailCampaign",
     element:<CreateEmailCampaign/>,
   },
-
-
   {
     path: "/Socialmedia",
     element:<Socialmedia/>,
@@ -149,14 +150,6 @@ const router = createBrowserRouter([
   {
     path: "/Postpopup",
     element:<Postpopup/>,
-  },
-  {
-    path: "/Account",
-    element:<Account/>,
-  },
-  {
-    path: "/Update",
-    element:<Update/>,
   },
   {
     path: "/EmailcampaignTemplate",
@@ -191,18 +184,6 @@ const router = createBrowserRouter([
     element:<Contentcalendar/>,
   },
   {
-    path: "/EmailcampaignTemplate",
-    element:<EmailcampaignTemplate/>,
-  },
-  {
-    path: "/EmailcampaignPopup",
-    element:<EmailcampaignPopup/>,
-  },
-  {
-    path: "/AllCampaigns",
-    element:<AllCampaigns/>,
-  },
-  {
     path: "/WhatsappCampaignTemplate",
     element:<WhatsappCampainTemplate/>,
   },
@@ -217,6 +198,14 @@ const router = createBrowserRouter([
   {
     path: "/Schedule",
     element:<Schedule/>,
+  },
+  {
+    path: "/Subscription",
+    element:<Subscription/>,
+  },
+  {
+    path: "/TrailEnded",
+    element:<TrailEnded/>,
   },
 
   {
@@ -253,7 +242,14 @@ const router = createBrowserRouter([
     element:<Dashboard/>,
   },
 
-
+  {
+    path: "/Update",
+    element: <Update />,
+  },
+  {
+    path: "/EditProfile",
+    element: <EditProfile />,
+  },
 
 ]);
 
@@ -277,32 +273,18 @@ function App() {
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/Loghome' element={<Loghome/>}/>
         <Route path='/Formcomplete' element={<Formcomplete/>}/>
-        <Route path='/Analytics' element={<Analytics/>}/>
+        <Route path='/SocialConnect' element={<SocialConnect/>}/>
         <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
         <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
         <Route path='/ContentLibrary2' element={<ContentLibrary2/>}/>
         <Route path='/Socialmedia' element={<Socialmedia/>}/>
-        <Route path='/Analytics' element={<Analytics/>}/>
-        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
-        <Route path='/Analytics' element={<Analytics/>}/>
-        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
-        <Route path='/Analytics' element={<Analytics/>}/>
         <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
         <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
         <Route path='/ContentLibrary2' element={<ContentLibrary2/>}/>
         <Route path='/Socialmedia' element={<Socialmedia/>}/>
-        <Route path='/Analytics' element={<Analytics/>}/>
-        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
-        <Route path='/Socialmedia' element={<Socialmedia/>}/>
-        <Route path='/Analytics' element={<Analytics/>}/>
-        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
-        <Route path='/Analytics' element={<Analytics/>}/>
-        <Route path='/Facebookconnect' element={<Facebookconnect/>}/>
-        <Route path='/ContentLibrary1' element={<ContentLibrary1/>}/>
-        <Route path='/ContentLibrary2' element={<ContentLibrary2/>}/>
         <Route path='/Postpopup' element={<Postpopup/>}/>
-        <Route path='/Account' element={<Account/>}/>
-        <Route path='/Update' element={<Update/>}/>
+        <Route path='/EditProfile' element={<EditProfile/>}/>
+
         <Route path='/Whatsappcampaign' element={<Whatsappcampaign/>}/>
         <Route path='/Createwhatsappcampaign' element={<Createwhatsappcampaign/>}/>
         <Route path='/Draft' element={<Draft/>}/>
@@ -325,6 +307,8 @@ function App() {
         <Route path='/Createwhatsappcampaign' element={<Createwhatsappcampaign/>}/>
         <Route path='/Draft' element={<Draft/>}/>
         <Route path='/Schedule' element={<Schedule/>}/>
+        <Route path='/Subscription' element={<Subscription/>}/>
+        <Route path='/TrailEnded' element={<TrailEnded/>}/>
         <Route path='/TotalUsers' element={<TotalUsers/>}/>
         <Route path='/ActiveUsers' element={<ActiveUsers/>}/>
         <Route path='/InactiveUsers' element={<InactiveUsers/>}/>

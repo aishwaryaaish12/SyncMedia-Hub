@@ -33,7 +33,7 @@ function ContentLibraryform(){
           alt=" "/>
       <Box>
       <Box >
-      <Typography variant='h4' sx={{marginLeft:17, color:'black'}}>CONTANT LIBRARY</Typography>
+      <Typography variant='h4' sx={{marginLeft:17, color:'black'}}>CONTENT LIBRARY</Typography>
       </Box>
 
       <Box sx={{width:600, height:300,backgroundColor:'white', marginTop:5, borderRadius:5, position:'relative', display:'flex',justifyContent:'center',alignItems:'center'}}>

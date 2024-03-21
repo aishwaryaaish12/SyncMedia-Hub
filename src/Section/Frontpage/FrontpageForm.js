@@ -15,7 +15,7 @@ function FrontpageForm() {
       our social media mastery ensures your brand not only stands out but stays ahead
     </Typography>
     <Button variant="contained" sx={{fontSize:24,backgroundColor:'white',color:'black',marginTop:4,width:250,borderRadius:3,height:75,textAlign:'center',marginLeft:15,'&:hover': { backgroundColor: 'white',},}}>
-      <Link to="/Login"style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Link to="/Subscription"style={{ textDecoration: 'none', color: 'inherit' }}>
       GET STARTED
       </Link> 
     </Button>

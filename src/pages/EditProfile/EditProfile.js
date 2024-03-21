@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, Stack } from '@mui/material';
-import Accountpage from '../../Section/Account/Accountpage'
+import EditProfileForm from '../../Section/EditProfile/EditProfileForm'
 
-function Account() {
+function EditProfile() {
   return (
     <Stack
   direction="row"
@@ -12,9 +12,9 @@ function Account() {
   sx={{height:"100vh", backgroundColor: '#eed9c4'}}
 >
 
-      < Accountpage/>
+      < EditProfileForm/>
     </Stack>
   )
 }
 
-export default Account
+export default EditProfile;

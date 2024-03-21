@@ -54,13 +54,19 @@ function AdminhomeForm() {
             <Typography variant="h6" ml={2} sx={{cursor:'pointer'}}>Admin</Typography>
           </Box>
           <List>
-            <ListItem sx={{cursor:'pointer'}} button component={Link} to="/adminhome" onClick={handleDrawerClose}>
+          <ListItem
+  sx={{cursor:'pointer'}}
+  button
+  component={Link}
+  to="/dashboard" // Adjust the route according to your dashboard page route
+  onClick={handleDrawerClose}
+>
+  <ListItemIcon>
+    <DashboardIcon sx={{color:'gray',marginLeft:0}} />
+  </ListItemIcon>
+  <ListItemText primary="Dashboard" sx={{marginLeft:0}}/>
+</ListItem>
 
-          <DashboardIcon sx={{color:'gray'}}>
-                <HomeIcon />
-              </DashboardIcon>
-              <ListItemText primary="Dashboard" sx={{marginLeft:3.8}}/>
-            </ListItem>
             <ListItem sx={{cursor:'pointer'}} button component={Link} to="/adminhome" onClick={handleDrawerClose}>
 
           <ListItemIcon>
