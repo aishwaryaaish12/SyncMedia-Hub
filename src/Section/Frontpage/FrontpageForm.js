@@ -11,7 +11,7 @@ function FrontpageForm() {
 
     <Box sx={{ display: 'flex', justifyContent: 'space-around', backgroundColor: '#eed9c4' }}>
       <Box sx={{ width: '500%', maxWidth: 500, display: 'flex', flexDirection: 'column' }}>
-        <Typography variant="h1" sx={{ pl: { xs: '1px', lg:'1px'}, mt: {xs:'40px',md:'45px', lg:'5rem'}, fontSize:{xs:'55px',lg:'82px'}}}>
+        <Typography variant="h1" sx={{ pl: { xs: '1px', lg:'1px'}, mt: {xs:'1rem',md:'45px', lg:'5rem'}, fontSize:{xs:'55px',lg:'82px'}}}>
           Dive into a world of influence-
         </Typography>
         <Typography variant='h4' sx={{ pl: { xs: '1px',lg: '1px'}, marginTop: 3 }}>

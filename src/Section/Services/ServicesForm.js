@@ -12,15 +12,14 @@ function ServicesForm() {
     <Box>
     <Box>
     <Typography sx={{fontSize:50,textAlign:'center',marginBottom:5}}>Our Services</Typography>
-
     </Box>
+    
     <Box sx={{ display: 'flex', gap: '28px' }}>
 
       <Card sx={{ maxWidth: 305 }}>
         <CardMedia
           sx={{ height: 190 }}
           image="/Assets/Crossplatformposting.png"
-    
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div" sx={{textAlign:'center'}}>
@@ -28,8 +27,8 @@ function ServicesForm() {
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{textAlign:'center'}}>
           Support posting on multiple social media platforms
- simultaneously, saving time for users managing 
-accounts on various channels.</Typography>
+          simultaneously, saving time for users managing 
+          accounts on various channels.</Typography>
         </CardContent>
       </Card>
 
@@ -37,7 +36,6 @@ accounts on various channels.</Typography>
         <CardMedia
           sx={{ height: 190 }}
           image="/Assets/contentcalendernew.png"
-        
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div" sx={{textAlign:'center'}}>
@@ -45,8 +43,8 @@ accounts on various channels.</Typography>
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{textAlign:'center'}}>
           Content calendar that provides a visual overview 
-of scheduled posts, making it easier to plan and 
-organize content across different platforms.          </Typography>
+          of scheduled posts, making it easier to plan and 
+          organize content across different platforms.          </Typography>
         </CardContent>
       </Card>
       <Card sx={{ maxWidth: 305 }}>
@@ -60,7 +58,7 @@ organize content across different platforms.          </Typography>
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{textAlign:'center'}}>
           Support users in executing comprehensive outreach plans by incorporating features for both email and WhatsApp campaigns on the platform. 
-                     </Typography>
+          </Typography>
         </CardContent>
       </Card>
 

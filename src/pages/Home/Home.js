@@ -16,11 +16,9 @@ import Loghome from '../Loghome/Loghome'
 import Contact from '../Contact/Contact'
 import ContentLibrary from '../ContentLibrary/ContentLibrary'
 import Business from '../Auth/Business/Business'
-import Analytics from '../Analytics/Analytics'
 import Facebookconnect from '../Auth/Facebookconnect/Facebookconnect'
 import EmailCampaign from '../EmailCampaign/EmailCampaign'
 import CreateEmailCampaign from '../CreateEmailCampaign/CreateEmailCampaign'
-import Account from '../Account/Account'
 import Update from '../Update/Update'
 import EmailcampaignTemplate from '../EmailcampaignTemplate/EmailcampaignTemplate'
 import EmailcampaignPopup from '../EmailcampaignPopup/EmailcampaignPopup'
@@ -29,7 +27,6 @@ import ContentLibrary1 from '../ContentLibrary1/ContentLibrary1'
 import ContentLibrary2 from '../ContentLibrary2/ContentLibrary2'
 import Socialmedia from '../Socialmedia/Socialmedia'
 import Postpopup from '../Postpopup/Postpopup'
-import Account from '../Account/Account'
 import Update from '../Update/Update'
 import Whatsappcampaign from '../Whatsappcampaign/Whatsappcampaign'
 import Createwhatsappcampaign from '../Createwhatsappcampaign/Createwhatsappcampaign'
@@ -44,6 +41,8 @@ import WhatsappCampainTemplate from '../WhatsappCampaignTemplate/WhatsappCampaig
 import WhatsapPopup from '../WhatsapPopup/WhatsapPopup'
 import Whatsappallcampaign from '../Whatsappallcampaign/Whatsappallcampaign'
 import Schedule from '../Schedule/Schedule'
+import Subscription from '../Subscription/Subscription'
+import TrailEnded from '../TrailEnded/TrailEnded'
 import Adminhome from '../Adminhome/Adminhome.js'
 import TotalUsers from '../Adminhome/TotalUsers.js'
 import ActiveUsers from '../Adminhome/ActiveUsers.js'
@@ -51,6 +50,9 @@ import InactiveUsers from '../Adminhome/InactiveUsers.js'
 import BlockedUsers from '../Adminhome/BlockedUsers.js'
 import Feedback  from '../Adminhome/Feedback.js'
 import SubscribedUsers from '../Adminhome/SubscribedUsers.js'
+import  Dashboard  from '../Adminhome/Dashboard.js'
+import EditProfile from '../EditProfile/EditProfile.js'
+import SocialConnect from '../SocialConnect/SocialConnect.js'
 import Dashboard  from '../Adminhome/Dashboard.js'
 import Subscription from '../Subscription/Subscription'
 import TrailEnded from '../TrailEnded/TrailEnded'
@@ -79,12 +81,12 @@ function Home() {
         <ContentLibrary1/>
         <ContentLibrary2/>
         <Socialmedia/>
-        <Analytics />
+        <SocialConnect />
         <Facebookconnect />
         <EmailCampaign />
         <CreateEmailCampaign />
         <Postpopup/>
-        <Account/>
+        <SocialConnect/>
         <Update/>
         <EmailcampaignTemplate />
         <EmailcampaignPopup />
@@ -93,12 +95,8 @@ function Home() {
         <Createwhatsappcampaign/>
         <Draft/>
         <Whatsappcampaign/>
-        <Createwhatsappcampaign/>
-        <Draft/>
         <Schedule/>
         <Whatsappcampaign/>
-        <Createwhatsappcampaign/>
-        <Draft/>
         <Contentcalendar/>
         <EmailcampaignTemplate />
         <EmailcampaignPopup />
@@ -107,6 +105,8 @@ function Home() {
         <WhatsapPopup />
         <Whatsappallcampaign />
         <Schedule/>
+        <Subscription/>
+        <TrailEnded/>
         <Adminhome />
         <TotalUsers />
         <ActiveUsers />
@@ -115,6 +115,7 @@ function Home() {
         <Feedback />
         <SubscribedUsers />
         <Dashboard />
+        <EditProfile />
         <Subscription/>
         <TrailEnded/>
     </Box> 

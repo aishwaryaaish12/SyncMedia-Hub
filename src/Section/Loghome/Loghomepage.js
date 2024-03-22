@@ -13,17 +13,9 @@ function Loghomepage(){
       Your Business with Us
     </Typography>
     <Typography variant='h5' sx={{marginLeft:15,marginTop:3, width:600,color:'black' }}>
-      Our complete automated social media management 
+      Our complete automated social media management platform puts the full potential of social media in your hands to transform your marketing strategy and also all areas of your organization 
     </Typography>
-    <Typography variant='h5' sx={{marginLeft:15,marginTop:1, width:700,color:'#black' }}>
-    platform  puts the full potential of social media in your hands 
-    </Typography>
-    <Typography variant='h5' sx={{marginLeft:15,marginTop:1, width:600,color:'#black' }}>
-      to transform your marketing strategy and also all areas  
-    </Typography>
-    <Typography variant='h5' sx={{marginLeft:15,marginTop:1, width:600,color:'#black' }}>
-     of your organization 
-    </Typography>
+
     <Box sx={{display: 'flex', flexDirection: 'row', marginLeft:15, gap:5, marginTop:8}}>
       <Box sx={{backgroundColor:'#2E1114', width:330, borderRadius:2,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
         <Box component="img"sx={{ width: 135, height:150,marginLeft:1, marginRight:1, marginTop:2}}

@@ -14,7 +14,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-function Accountpage () {
+function EditProfileForm () {
 
   const [selectedFile, setSelectedFile] = useState(null);
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
@@ -173,4 +173,4 @@ function Accountpage () {
   )
 }
 
-export default Accountpage
+export default EditProfileForm

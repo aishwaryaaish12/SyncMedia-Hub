@@ -17,11 +17,19 @@ function AnalyticsForm() {
   const handleMouseLeave = () => {
     setHoveredCard(null);
   };
+  const developerLinks = {
+    Facebook: 'https://developers.facebook.com/',
+    Instagram: 'https://www.instagram.com/developer/',
+    LinkedIn: 'https://developer.linkedin.com/',    
+    Twitter: 'https://developer.twitter.com/',
+    YouTube: 'https://developers.google.com/youtube/',
+    // Add links for LinkedIn, Twitter, YouTube, etc. as needed
+  };
 
   return (
     <Box>
       <Box>
-        <Typography variant='h3' sx={{ textAlign: 'center', marginTop: -10 }}>ANALYTICS</Typography>
+        <Typography variant='h3' sx={{ textAlign: 'center', marginTop: -10 }}>SOCIAL CONNECT</Typography>
       </Box>
       <Box>
         <Typography variant='h5' sx={{ textAlign: 'center', marginTop: 9,color:'#555' }}>Connect with your social media account</Typography>
@@ -59,8 +67,7 @@ function AnalyticsForm() {
                 {/* Add similar conditions for other social media names */}
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center', cursor: 'pointer' }}>
-                Connect
-              </Typography>
+              <a href={developerLinks[index === 1 ? 'Facebook' : index === 2 ? 'Instagram' : index === 3 ? 'LinkedIn' : index === 4 ? 'Twitter' : 'YouTube']} style={{ textDecoration: 'none', color: 'inherit'}}>Connect</a></Typography>
             </CardContent>
           </Card>
         ))}

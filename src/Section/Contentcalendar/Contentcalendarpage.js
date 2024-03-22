@@ -73,7 +73,7 @@ function Contentcalendarpage() {
 
   return (
     <Box position="fixed" top={0} left={0} width="100%" height="100%" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bgcolor="#eed9c4" zIndex={1}>
-      <Box position="fixed" top={25} left={820}>
+      <Box position="fixed" top={25} left={650}>
       <Typography variant="h4" align="center" mb={0}>
         Content Calendar
       </Typography>

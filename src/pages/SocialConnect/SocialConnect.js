@@ -1,8 +1,8 @@
 import { Box, Stack } from '@mui/material';
 import React from 'react';
-import AnalyticsForm from '../../Section/Analytics/AnalyticsForm';
+import SocialConnectForm from '../../Section/SocialConnect/SocialConnectForm';
 
-function Analytics() {
+function SocialConnect() {
   return (
     
 <Stack
@@ -13,9 +13,9 @@ function Analytics() {
   sx={{height:"100vh", backgroundColor: '#eed9c4'}}
 >
 
-      <AnalyticsForm />
+      <SocialConnectForm />
     </Stack>
   )
 }
 
-export default Analytics
+export default SocialConnect
