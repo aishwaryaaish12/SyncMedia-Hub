@@ -14,7 +14,6 @@ function FrontPage() {
   sx={{height:"100vh", backgroundColor: '#eed9c4'}}
 >
 <Navbar/>
-
       <FrontpageForm />
     </Stack>
   )

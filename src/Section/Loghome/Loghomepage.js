@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 function Loghomepage(){
   return (
     <Box sx={{ display: 'flex',width:'100%',justifyContent:'space-around', backgroundColor: '#eed9c4'}}>
-     <Box sx={{ width: '500%', maxWidth: 500,display:'flex',flexDirection:'column',marginLeft:-10 }}>
+     <Box sx={{ width: '500%', maxWidth: 500,display:'flex',flexDirection:'column',marginLeft:-21 }}>
     <Typography variant="h3" sx={{marginLeft:15,marginTop:4, width:450,color:'black' }}>
       Let's Level Up 
     </Typography>
@@ -24,7 +24,7 @@ function Loghomepage(){
     <Typography variant='h5' sx={{marginLeft:15,marginTop:1, width:600,color:'#black' }}>
      of your organization 
     </Typography>
-    <Box sx={{display: 'flex', flexDirection: 'row', marginLeft:20, gap:5, marginTop:8}}>
+    <Box sx={{display: 'flex', flexDirection: 'row', marginLeft:15, gap:5, marginTop:8}}>
       <Box sx={{backgroundColor:'#2E1114', width:330, borderRadius:2,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
         <Box component="img"sx={{ width: 135, height:150,marginLeft:1, marginRight:1, marginTop:2}}
         src="/Assets/undraw_Events_re_98ue.png"alt="">
@@ -40,7 +40,7 @@ function Loghomepage(){
         src="/Assets/undraw_Account_re_o7id (1).png"alt="">
         </Box>
         <Typography sx={{color:'white', marginLeft:5, marginTop:1}}>
-         <Link to="/Analytics" style={{ textDecoration: 'none', color: 'inherit' }}>Accounts</Link>
+         <Link to="/SocialConnect" style={{ textDecoration: 'none', color: 'inherit' }}>Accounts</Link>
         </Typography>
       </Box>
       <Box sx={{backgroundColor:'#2E1114', width:330, borderRadius:2,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
@@ -67,7 +67,7 @@ function Loghomepage(){
     </Box>
     
     </Box>
-        <Box component="img"sx={{ width: '30%',objectFit:'contain',marginTop:15, marginLeft:25 }}
+        <Box component="img"sx={{ width: '30%',objectFit:'contain',marginTop:10, marginLeft:25 }}
         src="/Assets/Loghomepic.png"alt="">
         </Box>
     </Box>

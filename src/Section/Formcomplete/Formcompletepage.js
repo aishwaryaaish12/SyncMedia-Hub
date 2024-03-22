@@ -13,7 +13,7 @@ function Formcompletepage(){
         Profile created successfully!
       </Typography>
       <Button variant="text" sx={{color:'black', marginTop:5, width:200, marginLeft:25}}>
-      <Link to="/Analytics" style={{ textDecoration: 'none', color: 'inherit'}}>OK</Link>
+      <Link to="/SocialConnect" style={{ textDecoration: 'none', color: 'inherit'}}>OK</Link>
 
       </Button>
     </Box>

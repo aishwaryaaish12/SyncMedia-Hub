@@ -16,6 +16,7 @@ import Loghome from '../Loghome/Loghome'
 import Contact from '../Contact/Contact'
 import ContentLibrary from '../ContentLibrary/ContentLibrary'
 import Business from '../Auth/Business/Business'
+import Analytics from '../Analytics/Analytics'
 
 import Analytics from '../SocialConnect/SocialConnect.js'
 import Facebookconnect from '../Auth/Facebookconnect/Facebookconnect'
@@ -50,8 +51,11 @@ import TotalUsers from '../Adminhome/TotalUsers.js'
 import ActiveUsers from '../Adminhome/ActiveUsers.js'
 import InactiveUsers from '../Adminhome/InactiveUsers.js'
 import BlockedUsers from '../Adminhome/BlockedUsers.js'
-import  Feedback  from '../Adminhome/Feedback.js'
+import Feedback  from '../Adminhome/Feedback.js'
 import SubscribedUsers from '../Adminhome/SubscribedUsers.js'
+import Dashboard  from '../Adminhome/Dashboard.js'
+import Subscription from '../Subscription/Subscription'
+import TrailEnded from '../TrailEnded/TrailEnded'
 import  Dashboard  from '../Adminhome/Dashboard.js'
 import EditProfile from '../EditProfile/EditProfile.js'
 import SocialConnect from '../SocialConnect/SocialConnect.js'
@@ -119,6 +123,8 @@ function Home() {
         <Feedback />
         <SubscribedUsers />
         <Dashboard />
+        <Subscription/>
+        <TrailEnded/>
         <EditProfile />
     </Box> 
   )
